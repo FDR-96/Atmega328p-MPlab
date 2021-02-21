@@ -13,7 +13,7 @@
 #define ADC_PIN			0
 
 #define FOSC 16000000
-#define BAUD 9600
+#define BAUD 115200
 #define MYUBRR FOSC/16/BAUD-1
 uint16_t adc_read(uint8_t adcx);
 

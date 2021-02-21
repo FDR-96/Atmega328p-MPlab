@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Electrificador_Atmega328P.X
+PROJECTNAME=Atmega328p-MPlab
 
 # Active Configuration
 DEFAULTCONF=default
