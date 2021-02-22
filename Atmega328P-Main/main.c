@@ -48,7 +48,7 @@ void main(void) {
                 break;
             case('%'):  
                         while (!( UCSR0A & (1<<UDRE0)));
-                        UDR0 = adcV;     
+                        UDR0 = '#';     
                 break;
             case('?'):  // Caracter modificador de frecuencia
                         PWM_off();
