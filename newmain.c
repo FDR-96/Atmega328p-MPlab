@@ -10,11 +10,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdbool.h>
-#define ADC_PIN			0
 
-#define FOSC 16000000
-#define BAUD 115200
-#define MYUBRR FOSC/16/BAUD-1
 uint16_t adc_read(uint8_t adcx);
 
 
@@ -84,7 +80,7 @@ void main(void) {
                PORTB = (0<<PB5);
          }
         while (!( UCSR0A & (1<<UDRE0)));  
-        UDR0 = adc_read(ADC);
+        UDR0 = dc_read(ADC);
           
           
        

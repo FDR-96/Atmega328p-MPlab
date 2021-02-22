@@ -10,6 +10,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/production/newmain.o
  .data          0x0000000000000000        0x0 build/default/production/newmain.o
  .bss           0x0000000000000000        0x0 build/default/production/newmain.o
+ .text.adc_read
+                0x0000000000000000       0x2a build/default/production/newmain.o
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
@@ -321,33 +323,33 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0x8d8
+.debug_info     0x0000000000000000      0x8ff
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_info    0x00000000000005f4      0x2e4 build/default/production/newmain.o
+ .debug_info    0x00000000000005f4      0x30b build/default/production/newmain.o
 
-.debug_abbrev   0x0000000000000000      0x641
+.debug_abbrev   0x0000000000000000      0x665
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x5a2 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_abbrev  0x00000000000005a2       0x9f build/default/production/newmain.o
+ .debug_abbrev  0x00000000000005a2       0xc3 build/default/production/newmain.o
 
-.debug_line     0x0000000000000000      0x2ea
+.debug_line     0x0000000000000000      0x24b
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x137 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_line    0x0000000000000137      0x1b3 build/default/production/newmain.o
+ .debug_line    0x0000000000000137      0x114 build/default/production/newmain.o
 
 .debug_frame    0x0000000000000000       0x34
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0x34 build/default/production/newmain.o
 
-.debug_str      0x0000000000000000      0x208
+.debug_str      0x0000000000000000      0x210
  *(.debug_str)
  .debug_str     0x0000000000000000      0x208 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_str     0x0000000000000208        0x0 build/default/production/newmain.o
+ .debug_str     0x0000000000000208        0x8 build/default/production/newmain.o
 
-.debug_loc      0x0000000000000000       0x86
+.debug_loc      0x0000000000000000       0x21
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x86 build/default/production/newmain.o
+ .debug_loc     0x0000000000000000       0x21 build/default/production/newmain.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -382,40 +384,35 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x40 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
 
-.text.main      0x0000000000000080      0x134
- .text.main     0x0000000000000080      0x134 build/default/production/newmain.o
+.text.main      0x0000000000000080       0x72
+ .text.main     0x0000000000000080       0x72 build/default/production/newmain.o
                 0x0000000000000080                main
 
-.text.adc_read  0x00000000000001b4       0x2a
- .text.adc_read
-                0x00000000000001b4       0x2a build/default/production/newmain.o
-                0x00000000000001b4                adc_read
-
-.text           0x00000000000001de        0x4
- .text          0x00000000000001de        0x4 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
-                0x00000000000001de                __vector_22
-                0x00000000000001de                __vector_1
-                0x00000000000001de                __vector_24
-                0x00000000000001de                __vector_12
-                0x00000000000001de                __bad_interrupt
-                0x00000000000001de                __vector_6
-                0x00000000000001de                __vector_3
-                0x00000000000001de                __vector_23
-                0x00000000000001de                __vector_25
-                0x00000000000001de                __vector_11
-                0x00000000000001de                __vector_13
-                0x00000000000001de                __vector_17
-                0x00000000000001de                __vector_19
-                0x00000000000001de                __vector_7
-                0x00000000000001de                __vector_5
-                0x00000000000001de                __vector_4
-                0x00000000000001de                __vector_9
-                0x00000000000001de                __vector_2
-                0x00000000000001de                __vector_21
-                0x00000000000001de                __vector_15
-                0x00000000000001de                __vector_8
-                0x00000000000001de                __vector_14
-                0x00000000000001de                __vector_10
-                0x00000000000001de                __vector_16
-                0x00000000000001de                __vector_18
-                0x00000000000001de                __vector_20
+.text           0x00000000000000f2        0x4
+ .text          0x00000000000000f2        0x4 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
+                0x00000000000000f2                __vector_22
+                0x00000000000000f2                __vector_1
+                0x00000000000000f2                __vector_24
+                0x00000000000000f2                __vector_12
+                0x00000000000000f2                __bad_interrupt
+                0x00000000000000f2                __vector_6
+                0x00000000000000f2                __vector_3
+                0x00000000000000f2                __vector_23
+                0x00000000000000f2                __vector_25
+                0x00000000000000f2                __vector_11
+                0x00000000000000f2                __vector_13
+                0x00000000000000f2                __vector_17
+                0x00000000000000f2                __vector_19
+                0x00000000000000f2                __vector_7
+                0x00000000000000f2                __vector_5
+                0x00000000000000f2                __vector_4
+                0x00000000000000f2                __vector_9
+                0x00000000000000f2                __vector_2
+                0x00000000000000f2                __vector_21
+                0x00000000000000f2                __vector_15
+                0x00000000000000f2                __vector_8
+                0x00000000000000f2                __vector_14
+                0x00000000000000f2                __vector_10
+                0x00000000000000f2                __vector_16
+                0x00000000000000f2                __vector_18
+                0x00000000000000f2                __vector_20
