@@ -13,7 +13,7 @@
 #include <avr/interrupt.h>
 #include <stdbool.h>
 #define FOSC 16000000
-#define BAUD 115200
+#define BAUD 9600
 #define MYUBRR FOSC/16/BAUD-1
 void USART_init()
 {
