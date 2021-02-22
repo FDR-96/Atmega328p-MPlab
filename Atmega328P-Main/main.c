@@ -25,18 +25,21 @@ void main(void) {
     int unidad = 0;
     int valor = 0;
     unsigned char tx = '#';
+    unsigned char adcVolt;
+    unsigned char Rx;
     while(1) {  
         float adcV = ADC_GetData(0)*5.0f/1024.0f;
+        adcVolt = adcV;
         PWM_setDuty(20);
         PWM_on();
-       
-        switch(USART_GetData())
+        Rx = USART_GetData();
+        switch(Rx)
         {
             case('#'):
                         USART_SetData(tx);      
                 break;
             case('%'):  
-                       
+                       USART_SetData(adcVolt);
                         USART_SetData(adcV);
                 break;
             case('?'):  // Caracter modificador de frecuencia
