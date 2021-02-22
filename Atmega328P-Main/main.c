@@ -82,7 +82,10 @@ void main(void) {
       
                             
             default  :
-                     
+                        while (!( UCSR0A & (1<<UDRE0)));
+                        
+                        UDR0 = Rx;
+                        PORTB = (1<<PB5);
 						break;
                         
         }
