@@ -12,6 +12,7 @@
 #include <stdbool.h>
 #include "ADC.h"
 #include "PWM.h"
+
 #include "USARTAtmega328P.h"
 #define FOSC 16000000
 #define BAUD 9600
@@ -39,7 +40,7 @@ void main(void) {
         PWM_setDuty(20);
         PWM_on();
         while (!( UCSR0A & (1<<UDRE0)));
-        UDR0 = txa;
+        UDR0 = ADC_GetData(0);
         while(UCSR0A & (1<<RXC0));
         Rx = UDR0;
         while (!( UCSR0A & (1<<UDRE0)));
