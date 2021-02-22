@@ -20,14 +20,14 @@ void main(void) {
     PWM_init(10);
     USART_init();
     sei();
-    unsigned char TxA = '#'; // Caracter de verificacion de conexion
-    unsigned char TxB = '%'; // Caracter de estado de bateria
-    unsigned char TxC = '$'; // Caracter de lectura ADC corriente
-    unsigned char TxD = '&'; // Caracter de lectura de Tension
-    unsigned char TxE = '?'; // Caracter modificador de frecuencia
-    unsigned char TxF = '¿'; // Caracter modificador de ancho de pulso
-    unsigned char TxG = '('; // Caracter de encendido del PWM
-    unsigned char TxH = ')'; // Caracter de Apagado del PWM
+    char TxA = '#'; // Caracter de verificacion de conexion
+    char TxB = '%'; // Caracter de estado de bateria
+    char TxC = '$'; // Caracter de lectura ADC corriente
+    char TxD = '&'; // Caracter de lectura de Tension
+    char TxE = '?'; // Caracter modificador de frecuencia
+    char TxF = '¿'; // Caracter modificador de ancho de pulso
+    char TxG = '('; // Caracter de encendido del PWM
+    char TxH = ')'; // Caracter de Apagado del PWM
     int decena = 0;
     int unidad = 0;
     int valor = 0;
@@ -38,11 +38,11 @@ void main(void) {
         switch(USART_GetData())
         {
             case('#'):
-                        USART_SetData(TxA);      
+                        USART_SendData(TxA);      
                 break;
             case('%'):  
                        
-                        USART_SetData(adcV);
+                        USART_SendData(adcV);
                 break;
             case('?'):  // Caracter modificador de frecuencia
                         PWM_off();
@@ -53,7 +53,7 @@ void main(void) {
                         }
                         PWM_init(valor);
                         PWM_on();
-                        USART_SetData(TxE);
+                        USART_SendData(TxE);
                 break;
             case('¿'):  // Caracter modificador de ancho de pulso
                         PWM_off();
@@ -64,7 +64,7 @@ void main(void) {
                         }
                         PWM_setDuty(valor);
                         PWM_on();
-                        USART_SetData(TxF);
+                        USART_SendData(TxF);
                 break;
       
                             

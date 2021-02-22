@@ -26,13 +26,13 @@ void USART_init()
 }
 
 
-void USART_SetData(char Tx)
+void USART_SendData(char Tx)
 {
      while (!( UCSR0A & (1<<UDRE0)));
      UDR0 = Tx;
 }
 
-char USART_GetData()
+unsigned char USART_GetData()
 {
 	while(UCSR0A & (1<<RXC0));
 	return UDR0;	
