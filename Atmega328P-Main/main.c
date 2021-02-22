@@ -24,9 +24,9 @@ void main(void) {
     int decena = 0;
     int unidad = 0;
     int valor = 0;
-    char tx = '#';
-    char adcVolt;
-    char Rx;
+    unsigned char tx = '#';
+    unsigned char adcVolt;
+    unsigned char Rx;
     while(1) {  
         float adcV = ADC_GetData(0)*5.0f/1024.0f;
         adcVolt = adcV;
