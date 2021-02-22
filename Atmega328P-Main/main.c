@@ -18,7 +18,6 @@ void main(void) {
     cli();
     ADC_init();
     PWM_init(10);
-    PWM_setDuty(20);
     USART_init();
     sei();
     unsigned char TxA = '#'; // Caracter de verificacion de conexion
@@ -34,6 +33,8 @@ void main(void) {
     int valor = 0;
     while(1) {  
         float adcV = ADC_GetData(0)*5.0f/1024.0f;
+        PWM_setDuty(20);
+        PWM_on();
         switch(USART_GetData())
         {
             case('#'):

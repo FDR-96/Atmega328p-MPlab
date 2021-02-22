@@ -15,7 +15,7 @@
 	void PWM_on();
 	void PWM_off();
 
-	void PWM_setDutyA(int duty);
-	void PWM_setDutyB(int duty);
+	void PWM_setDuty(int duty);
+
 
 #endif /* PWM_H_ */

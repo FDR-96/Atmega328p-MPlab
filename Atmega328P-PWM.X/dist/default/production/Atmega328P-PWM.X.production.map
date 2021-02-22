@@ -405,21 +405,21 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000       0x60
+.debug_aranges  0x0000000000000000       0x58
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x20 build/default/production/main.o
  .debug_aranges
-                0x0000000000000020       0x40 build/default/production/PWM.o
+                0x0000000000000020       0x38 build/default/production/PWM.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0xba7
+.debug_info     0x0000000000000000      0xba9
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_info    0x00000000000005f4      0x2b6 build/default/production/main.o
- .debug_info    0x00000000000008aa      0x2fd build/default/production/PWM.o
+ .debug_info    0x00000000000005f4      0x2be build/default/production/main.o
+ .debug_info    0x00000000000008b2      0x2f7 build/default/production/PWM.o
 
 .debug_abbrev   0x0000000000000000      0x6a8
  *(.debug_abbrev)
@@ -427,26 +427,26 @@ END GROUP
  .debug_abbrev  0x00000000000005a2       0x88 build/default/production/main.o
  .debug_abbrev  0x000000000000062a       0x7e build/default/production/PWM.o
 
-.debug_line     0x0000000000000000      0x2d6
+.debug_line     0x0000000000000000      0x2a2
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x137 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_line    0x0000000000000137       0x61 build/default/production/main.o
- .debug_line    0x0000000000000198      0x13e build/default/production/PWM.o
+ .debug_line    0x0000000000000137       0x5b build/default/production/main.o
+ .debug_line    0x0000000000000192      0x110 build/default/production/PWM.o
 
-.debug_frame    0x0000000000000000       0xa0
+.debug_frame    0x0000000000000000       0x84
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0x24 build/default/production/main.o
- .debug_frame   0x0000000000000024       0x7c build/default/production/PWM.o
+ .debug_frame   0x0000000000000024       0x60 build/default/production/PWM.o
 
-.debug_str      0x0000000000000000      0x22b
+.debug_str      0x0000000000000000      0x21d
  *(.debug_str)
  .debug_str     0x0000000000000000      0x208 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_str     0x0000000000000208       0x23 build/default/production/main.o
- .debug_str     0x000000000000022b        0x0 build/default/production/PWM.o
+ .debug_str     0x0000000000000208       0x15 build/default/production/main.o
+ .debug_str     0x000000000000021d        0x0 build/default/production/PWM.o
 
-.debug_loc      0x0000000000000000       0xb1
+.debug_loc      0x0000000000000000       0x7b
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0xb1 build/default/production/PWM.o
+ .debug_loc     0x0000000000000000       0x7b build/default/production/PWM.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -466,10 +466,10 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000       0x40
+.debug_ranges   0x0000000000000000       0x38
  *(.debug_ranges)
  .debug_ranges  0x0000000000000000       0x10 build/default/production/main.o
- .debug_ranges  0x0000000000000010       0x30 build/default/production/PWM.o
+ .debug_ranges  0x0000000000000010       0x28 build/default/production/PWM.o
 
 .debug_macro
  *(.debug_macro)
@@ -486,81 +486,75 @@ LOAD data_init
  .bss._freq     0x0000000000800100        0x2 build/default/production/PWM.o
                 0x0000000000800100                _freq
 
-.text.PWM_setDutyA
+.text.PWM_setDuty
                 0x00000000000000c2       0x5c
- .text.PWM_setDutyA
+ .text.PWM_setDuty
                 0x00000000000000c2       0x5c build/default/production/PWM.o
-                0x00000000000000c2                PWM_setDutyA
+                0x00000000000000c2                PWM_setDuty
 
-.text.PWM_setDutyB
-                0x000000000000011e       0x5c
- .text.PWM_setDutyB
-                0x000000000000011e       0x5c build/default/production/PWM.o
-                0x000000000000011e                PWM_setDutyB
-
-.text.PWM_init  0x000000000000017a       0x4c
+.text.PWM_init  0x000000000000011e       0x4c
  .text.PWM_init
-                0x000000000000017a       0x4c build/default/production/PWM.o
-                0x000000000000017a                PWM_init
+                0x000000000000011e       0x4c build/default/production/PWM.o
+                0x000000000000011e                PWM_init
 
 .text.libgcc.div
-                0x00000000000001c6       0x44
+                0x000000000000016a       0x44
  .text.libgcc.div
-                0x00000000000001c6       0x44 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_udivmodsi4.o)
-                0x00000000000001c6                __udivmodsi4
+                0x000000000000016a       0x44 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_udivmodsi4.o)
+                0x000000000000016a                __udivmodsi4
 
-.text.main      0x000000000000020a       0x22
- .text.main     0x000000000000020a       0x22 build/default/production/main.o
-                0x000000000000020a                main
-
-.text.PWM_on    0x000000000000022c       0x20
- .text.PWM_on   0x000000000000022c       0x20 build/default/production/PWM.o
-                0x000000000000022c                PWM_on
+.text.PWM_on    0x00000000000001ae       0x20
+ .text.PWM_on   0x00000000000001ae       0x20 build/default/production/PWM.o
+                0x00000000000001ae                PWM_on
 
 .text.libgcc.mul
-                0x000000000000024c       0x1e
+                0x00000000000001ce       0x1e
  .text.libgcc.mul
-                0x000000000000024c       0x1e c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_umulhisi3.o)
-                0x000000000000024c                __umulhisi3
+                0x00000000000001ce       0x1e c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_umulhisi3.o)
+                0x00000000000001ce                __umulhisi3
+
+.text.main      0x00000000000001ec       0x1a
+ .text.main     0x00000000000001ec       0x1a build/default/production/main.o
+                0x00000000000001ec                main
 
 .text.libgcc.mul
-                0x000000000000026a       0x16
+                0x0000000000000206       0x16
  .text.libgcc.mul
-                0x000000000000026a       0x16 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_muluhisi3.o)
-                0x000000000000026a                __muluhisi3
+                0x0000000000000206       0x16 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_muluhisi3.o)
+                0x0000000000000206                __muluhisi3
 
 .text.libgcc.mul
-                0x0000000000000280       0x10
+                0x000000000000021c       0x10
  .text.libgcc.mul
-                0x0000000000000280       0x10 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_mulshisi3.o)
-                0x0000000000000280                __mulshisi3
-                0x0000000000000286                __mulohisi3
+                0x000000000000021c       0x10 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_mulshisi3.o)
+                0x000000000000021c                __mulshisi3
+                0x0000000000000222                __mulohisi3
 
-.text           0x0000000000000290        0x4
- .text          0x0000000000000290        0x4 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
-                0x0000000000000290                __vector_22
-                0x0000000000000290                __vector_1
-                0x0000000000000290                __vector_24
-                0x0000000000000290                __vector_12
-                0x0000000000000290                __bad_interrupt
-                0x0000000000000290                __vector_6
-                0x0000000000000290                __vector_3
-                0x0000000000000290                __vector_23
-                0x0000000000000290                __vector_25
-                0x0000000000000290                __vector_11
-                0x0000000000000290                __vector_13
-                0x0000000000000290                __vector_17
-                0x0000000000000290                __vector_19
-                0x0000000000000290                __vector_7
-                0x0000000000000290                __vector_5
-                0x0000000000000290                __vector_4
-                0x0000000000000290                __vector_9
-                0x0000000000000290                __vector_2
-                0x0000000000000290                __vector_21
-                0x0000000000000290                __vector_15
-                0x0000000000000290                __vector_8
-                0x0000000000000290                __vector_14
-                0x0000000000000290                __vector_10
-                0x0000000000000290                __vector_16
-                0x0000000000000290                __vector_18
-                0x0000000000000290                __vector_20
+.text           0x000000000000022c        0x4
+ .text          0x000000000000022c        0x4 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
+                0x000000000000022c                __vector_22
+                0x000000000000022c                __vector_1
+                0x000000000000022c                __vector_24
+                0x000000000000022c                __vector_12
+                0x000000000000022c                __bad_interrupt
+                0x000000000000022c                __vector_6
+                0x000000000000022c                __vector_3
+                0x000000000000022c                __vector_23
+                0x000000000000022c                __vector_25
+                0x000000000000022c                __vector_11
+                0x000000000000022c                __vector_13
+                0x000000000000022c                __vector_17
+                0x000000000000022c                __vector_19
+                0x000000000000022c                __vector_7
+                0x000000000000022c                __vector_5
+                0x000000000000022c                __vector_4
+                0x000000000000022c                __vector_9
+                0x000000000000022c                __vector_2
+                0x000000000000022c                __vector_21
+                0x000000000000022c                __vector_15
+                0x000000000000022c                __vector_8
+                0x000000000000022c                __vector_14
+                0x000000000000022c                __vector_10
+                0x000000000000022c                __vector_16
+                0x000000000000022c                __vector_18
+                0x000000000000022c                __vector_20

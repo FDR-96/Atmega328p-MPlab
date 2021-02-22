@@ -44,7 +44,7 @@ void PWM_off()
 	TCCR1B &=~ (1<<CS12);
 }
 
-void PWM_setDutyA(int duty)
+void PWM_setDuty(int duty)
 {
 	//Pin configuration
 	DDRB |= (1<<DDB1);
@@ -54,16 +54,4 @@ void PWM_setDutyA(int duty)
 	TCCR1A |=  (1<<COM1A1);
 
 	OCR1A = (((F_CPU/1024/_freq) - 1)*duty)/100;
-}
-
-void PWM_setDutyB(int duty)
-{
-	//Pin configuration
-	DDRB |= (1<<DDB2);
-
-	//Output active
-	TCCR1A &=~ (1<<COM1B0);
-	TCCR1A |=  (1<<COM1B1);
-
-	OCR1B = (((F_CPU/1024/_freq) - 1)*duty)/100;
 }

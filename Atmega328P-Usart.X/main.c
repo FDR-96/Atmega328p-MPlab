@@ -13,10 +13,13 @@
 #include "USARTAtmega328P.h"
 unsigned char TxA = '#';
 void main(void) {
+    cli();
     USART_init();
+    sei();
     while(1)
     {
-        switch(USART_GetData())
+        USART_GetData();
+        switch(UDR0)
         {
             case('#'):
                         USART_SetData(TxA);

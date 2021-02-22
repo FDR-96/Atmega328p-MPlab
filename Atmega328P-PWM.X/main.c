@@ -19,9 +19,8 @@ int main(void)
     PWM_init(10);
 	sei();
 
-	PWM_setDutyA(20);
-	PWM_setDutyB(30);
-
+	PWM_setDuty(20);
+	
 	PWM_on();
 
     while (1) 
