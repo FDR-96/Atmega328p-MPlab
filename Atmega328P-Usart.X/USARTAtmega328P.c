@@ -32,7 +32,7 @@ void USART_SetData(char Tx)
      UDR0 = Tx;
 }
 
-char USART_GetData()
+unsigned char USART_GetData()
 {
 	while(UCSR0A & (1<<RXC0));
 	return UDR0;	

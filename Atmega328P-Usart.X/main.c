@@ -18,8 +18,8 @@ void main(void) {
     sei();
     while(1)
     {
-        USART_GetData();
-        switch(UDR0)
+        
+        switch(USART_GetData())
         {
             case('#'):
                         USART_SetData(TxA);
