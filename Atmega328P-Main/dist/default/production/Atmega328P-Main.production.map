@@ -483,13 +483,13 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1380
+.debug_info     0x0000000000000000     0x1390
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_info    0x00000000000005f4      0x475 build/default/production/main.o
- .debug_info    0x0000000000000a69      0x2ce build/default/production/USARTAtmega328P.o
- .debug_info    0x0000000000000d37      0x2f6 build/default/production/PWM.o
- .debug_info    0x000000000000102d      0x353 build/default/production/ADC.o
+ .debug_info    0x00000000000005f4      0x47d build/default/production/main.o
+ .debug_info    0x0000000000000a71      0x2d6 build/default/production/USARTAtmega328P.o
+ .debug_info    0x0000000000000d47      0x2f6 build/default/production/PWM.o
+ .debug_info    0x000000000000103d      0x353 build/default/production/ADC.o
 
 .debug_abbrev   0x0000000000000000      0x84c
  *(.debug_abbrev)
