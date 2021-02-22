@@ -39,8 +39,7 @@ void main(void) {
         txa = adcV;
         PWM_setDuty(20);
         PWM_on();
-        while (!( UCSR0A & (1<<UDRE0)));
-        UDR0 = ADC_GetData(0);
+    
         while(UCSR0A & (1<<RXC0));
         Rx = UDR0;
     
@@ -52,7 +51,7 @@ void main(void) {
                 break;
             case('%'):  
                         while (!( UCSR0A & (1<<UDRE0)));
-                        UDR0 = '#';     
+                        UDR0 = ADC_GetData(0);;     
                 break;
             case('?'):  // Caracter modificador de frecuencia
                         PWM_off();
