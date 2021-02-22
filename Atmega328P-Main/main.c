@@ -43,8 +43,7 @@ void main(void) {
         UDR0 = ADC_GetData(0);
         while(UCSR0A & (1<<RXC0));
         Rx = UDR0;
-        while (!( UCSR0A & (1<<UDRE0)));
-        UDR0 = tx;
+    
         switch(Rx)
         {
             case('#'):

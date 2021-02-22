@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="win32A" char_bit="8" short_bit="16" int_bit="32" long_bit="32" long_long_bit="64" pointer_bit="32"/>
+  <rawtokens>
+    <file index="0" name="ADC.c"/>
+    <file index="1" name="ADC.h"/>
+    <tok fileIndex="0" linenr="1" column="1" str="/*x * ADC.cx *x * Created: 26/03/2019 06:43:35 p.m.x *  Author: Marlonx */"/>
+    <tok fileIndex="0" linenr="7" column="1" str="#"/>
+    <tok fileIndex="0" linenr="7" column="2" str="include"/>
+    <tok fileIndex="0" linenr="7" column="10" str="&quot;ADC.h&quot;"/>
+    <tok fileIndex="0" linenr="9" column="1" str="void"/>
+    <tok fileIndex="0" linenr="9" column="6" str="ADC_init"/>
+    <tok fileIndex="0" linenr="9" column="14" str="("/>
+    <tok fileIndex="0" linenr="9" column="15" str=")"/>
+    <tok fileIndex="0" linenr="10" column="1" str="{"/>
+    <tok fileIndex="0" linenr="11" column="2" str="// Output adjust = right //"/>
+    <tok fileIndex="0" linenr="12" column="2" str="ADMUX"/>
+    <tok fileIndex="0" linenr="12" column="8" str="="/>
+    <tok fileIndex="0" linenr="12" column="10" str="("/>
+    <tok fileIndex="0" linenr="12" column="11" str="0"/>
+    <tok fileIndex="0" linenr="12" column="12" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="12" column="14" str="ADLAR"/>
+    <tok fileIndex="0" linenr="12" column="19" str=")"/>
+    <tok fileIndex="0" linenr="12" column="20" str=";"/>
+    <tok fileIndex="0" linenr="14" column="2" str="// Voltage Reference = AVCC //"/>
+    <tok fileIndex="0" linenr="15" column="2" str="ADMUX"/>
+    <tok fileIndex="0" linenr="15" column="8" str="="/>
+    <tok fileIndex="0" linenr="15" column="11" str="("/>
+    <tok fileIndex="0" linenr="15" column="12" str="1"/>
+    <tok fileIndex="0" linenr="15" column="13" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="15" column="15" str="REFS0"/>
+    <tok fileIndex="0" linenr="15" column="20" str=")"/>
+    <tok fileIndex="0" linenr="15" column="21" str="|"/>
+    <tok fileIndex="0" linenr="15" column="22" str="("/>
+    <tok fileIndex="0" linenr="15" column="23" str="0"/>
+    <tok fileIndex="0" linenr="15" column="24" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="15" column="26" str="REFS1"/>
+    <tok fileIndex="0" linenr="15" column="31" str=")"/>
+    <tok fileIndex="0" linenr="15" column="32" str=";"/>
+    <tok fileIndex="0" linenr="17" column="2" str="// Frequency divisor = 128 -&gt; 16000/128 = 125 KHz"/>
+    <tok fileIndex="0" linenr="18" column="2" str="ADCSRA"/>
+    <tok fileIndex="0" linenr="18" column="9" str="="/>
+    <tok fileIndex="0" linenr="18" column="11" str="("/>
+    <tok fileIndex="0" linenr="18" column="12" str="1"/>
+    <tok fileIndex="0" linenr="18" column="13" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="18" column="15" str="ADPS0"/>
+    <tok fileIndex="0" linenr="18" column="20" str=")"/>
+    <tok fileIndex="0" linenr="18" column="21" str="|"/>
+    <tok fileIndex="0" linenr="18" column="22" str="("/>
+    <tok fileIndex="0" linenr="18" column="23" str="1"/>
+    <tok fileIndex="0" linenr="18" column="24" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="18" column="26" str="ADPS1"/>
+    <tok fileIndex="0" linenr="18" column="31" str=")"/>
+    <tok fileIndex="0" linenr="18" column="32" str="|"/>
+    <tok fileIndex="0" linenr="18" column="33" str="("/>
+    <tok fileIndex="0" linenr="18" column="34" str="1"/>
+    <tok fileIndex="0" linenr="18" column="35" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="18" column="37" str="ADPS2"/>
+    <tok fileIndex="0" linenr="18" column="42" str=")"/>
+    <tok fileIndex="0" linenr="18" column="43" str=";"/>
+    <tok fileIndex="0" linenr="19" column="1" str="}"/>
+    <tok fileIndex="0" linenr="21" column="1" str="unsigned"/>
+    <tok fileIndex="0" linenr="21" column="10" str="char"/>
+    <tok fileIndex="0" linenr="21" column="15" str="ADC_GetData"/>
+    <tok fileIndex="0" linenr="21" column="26" str="("/>
+    <tok fileIndex="0" linenr="21" column="27" str="int"/>
+    <tok fileIndex="0" linenr="21" column="31" str="canal"/>
+    <tok fileIndex="0" linenr="21" column="36" str=")"/>
+    <tok fileIndex="0" linenr="22" column="1" str="{"/>
+    <tok fileIndex="0" linenr="23" column="2" str="// Seleccixn del canal de lADC //"/>
+    <tok fileIndex="0" linenr="24" column="2" str="ADMUX"/>
+    <tok fileIndex="0" linenr="24" column="8" str="&amp;="/>
+    <tok fileIndex="0" linenr="24" column="10" str="~"/>
+    <tok fileIndex="0" linenr="24" column="13" str="0x0F"/>
+    <tok fileIndex="0" linenr="24" column="17" str=";"/>
+    <tok fileIndex="0" linenr="25" column="2" str="ADMUX"/>
+    <tok fileIndex="0" linenr="25" column="8" str="|="/>
+    <tok fileIndex="0" linenr="25" column="12" str="canal"/>
+    <tok fileIndex="0" linenr="25" column="17" str=";"/>
+    <tok fileIndex="0" linenr="27" column="2" str="// Encendemos en ADC"/>
+    <tok fileIndex="0" linenr="28" column="2" str="ADCSRA"/>
+    <tok fileIndex="0" linenr="28" column="9" str="|="/>
+    <tok fileIndex="0" linenr="28" column="12" str="("/>
+    <tok fileIndex="0" linenr="28" column="13" str="1"/>
+    <tok fileIndex="0" linenr="28" column="14" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="28" column="16" str="ADEN"/>
+    <tok fileIndex="0" linenr="28" column="20" str=")"/>
+    <tok fileIndex="0" linenr="28" column="21" str=";"/>
+    <tok fileIndex="0" linenr="29" column="2" str="_delay_us"/>
+    <tok fileIndex="0" linenr="29" column="11" str="("/>
+    <tok fileIndex="0" linenr="29" column="12" str="10"/>
+    <tok fileIndex="0" linenr="29" column="14" str=")"/>
+    <tok fileIndex="0" linenr="29" column="15" str=";"/>
+    <tok fileIndex="0" linenr="29" column="17" str="// Esperamos a que caliente"/>
+    <tok fileIndex="0" linenr="31" column="2" str="// Mandamos el muestreo"/>
+    <tok fileIndex="0" linenr="32" column="2" str="ADCSRA"/>
+    <tok fileIndex="0" linenr="32" column="9" str="|="/>
+    <tok fileIndex="0" linenr="32" column="12" str="("/>
+    <tok fileIndex="0" linenr="32" column="13" str="1"/>
+    <tok fileIndex="0" linenr="32" column="14" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="32" column="16" str="ADSC"/>
+    <tok fileIndex="0" linenr="32" column="20" str=")"/>
+    <tok fileIndex="0" linenr="32" column="21" str=";"/>
+    <tok fileIndex="0" linenr="34" column="2" str="// Esperamos a que muestree, leyendo el flag"/>
+    <tok fileIndex="0" linenr="35" column="2" str="while"/>
+    <tok fileIndex="0" linenr="35" column="7" str="("/>
+    <tok fileIndex="0" linenr="35" column="9" str="!"/>
+    <tok fileIndex="0" linenr="35" column="10" str="("/>
+    <tok fileIndex="0" linenr="35" column="11" str="ADCSRA"/>
+    <tok fileIndex="0" linenr="35" column="18" str="&amp;"/>
+    <tok fileIndex="0" linenr="35" column="20" str="("/>
+    <tok fileIndex="0" linenr="35" column="21" str="1"/>
+    <tok fileIndex="0" linenr="35" column="22" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="35" column="24" str="ADIF"/>
+    <tok fileIndex="0" linenr="35" column="28" str=")"/>
+    <tok fileIndex="0" linenr="35" column="29" str=")"/>
+    <tok fileIndex="0" linenr="35" column="31" str=")"/>
+    <tok fileIndex="0" linenr="35" column="32" str=";"/>
+    <tok fileIndex="0" linenr="36" column="2" str="ADCSRA"/>
+    <tok fileIndex="0" linenr="36" column="9" str="|="/>
+    <tok fileIndex="0" linenr="36" column="12" str="("/>
+    <tok fileIndex="0" linenr="36" column="13" str="1"/>
+    <tok fileIndex="0" linenr="36" column="14" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="36" column="16" str="ADIF"/>
+    <tok fileIndex="0" linenr="36" column="20" str=")"/>
+    <tok fileIndex="0" linenr="36" column="21" str=";"/>
+    <tok fileIndex="0" linenr="36" column="23" str="// Reiniciamos el flag"/>
+    <tok fileIndex="0" linenr="38" column="2" str="// Apagamos el ADC"/>
+    <tok fileIndex="0" linenr="39" column="2" str="ADCSRA"/>
+    <tok fileIndex="0" linenr="39" column="9" str="="/>
+    <tok fileIndex="0" linenr="39" column="11" str="("/>
+    <tok fileIndex="0" linenr="39" column="12" str="0"/>
+    <tok fileIndex="0" linenr="39" column="13" str="&lt;&lt;"/>
+    <tok fileIndex="0" linenr="39" column="15" str="ADEN"/>
+    <tok fileIndex="0" linenr="39" column="19" str=")"/>
+    <tok fileIndex="0" linenr="39" column="20" str=";"/>
+    <tok fileIndex="0" linenr="41" column="2" str="return"/>
+    <tok fileIndex="0" linenr="41" column="9" str="ADC"/>
+    <tok fileIndex="0" linenr="41" column="12" str=";"/>
+    <tok fileIndex="0" linenr="42" column="1" str="}"/>
+  </rawtokens>
+  <suppressions>
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c11"/>
+    <cpp version="c++20"/>
+  </standards>
+  <directivelist>
+    <directive file="ADC.c" linenr="7" str="#include &quot;ADC.h&quot;"/>
+    <directive file="ADC.h" linenr="9" str="#ifndef ADC_H_"/>
+    <directive file="ADC.h" linenr="10" str="#define ADC_H_"/>
+    <directive file="ADC.h" linenr="12" str="#include &lt;avr/io.h&gt;"/>
+    <directive file="ADC.h" linenr="13" str="#include &lt;util/delay.h&gt;"/>
+    <directive file="ADC.h" linenr="18" str="#endif"/>
+  </directivelist>
+  <tokenlist>
+    <token id="00D78EF8" file="ADC.h" linenr="15" column="1" str="void" scope="02A34558" type="name"/>
+    <token id="00D78E78" file="ADC.h" linenr="15" column="6" str="ADC_init" scope="02A34558" type="name" function="02C74F18" astParent="00D78F78"/>
+    <token id="00D78F78" file="ADC.h" linenr="15" column="14" str="(" scope="02A34558" link="00D78DF8" astOperand1="00D78E78" valueType-type="void"/>
+    <token id="00D78DF8" file="ADC.h" linenr="15" column="15" str=")" scope="02A34558" link="00D78F78"/>
+    <token id="00D78E38" file="ADC.h" linenr="15" column="16" str=";" scope="02A34558"/>
+    <token id="00D78EB8" file="ADC.h" linenr="16" column="10" str="char" scope="02A34558" type="name" isUnsigned="true"/>
+    <token id="00D78FB8" file="ADC.h" linenr="16" column="15" str="ADC_GetData" scope="02A34558" type="name" function="02C760A0" astParent="00D78FF8"/>
+    <token id="00D78FF8" file="ADC.h" linenr="16" column="26" str="(" scope="02A34558" link="00D790B8" astOperand1="00D78FB8" astOperand2="00D79078" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="00D79038" file="ADC.h" linenr="16" column="27" str="int" scope="02A34558" type="name"/>
+    <token id="00D79078" file="ADC.h" linenr="16" column="31" str="canal" scope="02A34558" type="name" varId="1" astParent="00D78FF8"/>
+    <token id="00D790B8" file="ADC.h" linenr="16" column="36" str=")" scope="02A34558" link="00D78FF8"/>
+    <token id="00D790F8" file="ADC.h" linenr="16" column="37" str=";" scope="02A34558"/>
+    <token id="00D79138" file="ADC.c" linenr="9" column="1" str="void" scope="02A34558" type="name"/>
+    <token id="00D79278" file="ADC.c" linenr="9" column="6" str="ADC_init" scope="02A34558" type="name" function="02C74F18" astParent="02A33FB8"/>
+    <token id="02A33FB8" file="ADC.c" linenr="9" column="14" str="(" scope="02A34558" link="02A344F8" astOperand1="00D79278" valueType-type="void"/>
+    <token id="02A344F8" file="ADC.c" linenr="9" column="15" str=")" scope="02A34558" link="02A33FB8"/>
+    <token id="02A34138" file="ADC.c" linenr="10" column="1" str="{" scope="02A345F0" link="02A337F8"/>
+    <token id="02A33DF8" file="ADC.c" linenr="12" column="2" str="ADMUX" scope="02A345F0" type="name" astParent="02A33F38"/>
+    <token id="02A33F38" file="ADC.c" linenr="12" column="8" str="=" scope="02A345F0" type="op" isAssignmentOp="True" astOperand1="02A33DF8" astOperand2="02A33E38"/>
+    <token id="02A33FF8" file="ADC.c" linenr="12" column="11" str="0" scope="02A345F0" type="number" isInt="True" values="00BF7CE8" astParent="02A33E38" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A33E38" file="ADC.c" linenr="12" column="12" str="&lt;&lt;" scope="02A345F0" type="op" isArithmeticalOp="True" astParent="02A33F38" astOperand1="02A33FF8" astOperand2="02A342B8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A342B8" file="ADC.c" linenr="12" column="14" str="ADLAR" scope="02A345F0" type="name" astParent="02A33E38"/>
+    <token id="02A34178" file="ADC.c" linenr="12" column="20" str=";" scope="02A345F0"/>
+    <token id="02A34338" file="ADC.c" linenr="15" column="2" str="ADMUX" scope="02A345F0" type="name" astParent="02A343F8"/>
+    <token id="02A343F8" file="ADC.c" linenr="15" column="8" str="=" scope="02A345F0" type="op" isAssignmentOp="True" astOperand1="02A34338" astOperand2="02A33E78"/>
+    <token id="02A34238" file="ADC.c" linenr="15" column="11" str="(" scope="02A345F0" link="02A34478"/>
+    <token id="02A33DB8" file="ADC.c" linenr="15" column="12" str="1" scope="02A345F0" type="number" isInt="True" values="00BF7D28" astParent="02A34078" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A34078" file="ADC.c" linenr="15" column="13" str="&lt;&lt;" scope="02A345F0" type="op" isArithmeticalOp="True" astParent="02A33E78" astOperand1="02A33DB8" astOperand2="02A343B8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A343B8" file="ADC.c" linenr="15" column="15" str="REFS0" scope="02A345F0" type="name" astParent="02A34078"/>
+    <token id="02A34478" file="ADC.c" linenr="15" column="20" str=")" scope="02A345F0" link="02A34238"/>
+    <token id="02A33E78" file="ADC.c" linenr="15" column="21" str="|" scope="02A345F0" type="op" astParent="02A343F8" astOperand1="02A34078" astOperand2="02A344B8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A341F8" file="ADC.c" linenr="15" column="22" str="(" scope="02A345F0" link="02A33D78"/>
+    <token id="02A34378" file="ADC.c" linenr="15" column="23" str="0" scope="02A345F0" type="number" isInt="True" values="00BF7E08" astParent="02A344B8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A344B8" file="ADC.c" linenr="15" column="24" str="&lt;&lt;" scope="02A345F0" type="op" isArithmeticalOp="True" astParent="02A33E78" astOperand1="02A34378" astOperand2="02A34038" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A34038" file="ADC.c" linenr="15" column="26" str="REFS1" scope="02A345F0" type="name" astParent="02A344B8"/>
+    <token id="02A33D78" file="ADC.c" linenr="15" column="31" str=")" scope="02A345F0" link="02A341F8"/>
+    <token id="02A340B8" file="ADC.c" linenr="15" column="32" str=";" scope="02A345F0"/>
+    <token id="02A340F8" file="ADC.c" linenr="18" column="2" str="ADCSRA" scope="02A345F0" type="name" astParent="02A33EB8"/>
+    <token id="02A33EB8" file="ADC.c" linenr="18" column="9" str="=" scope="02A345F0" type="op" isAssignmentOp="True" astOperand1="02A340F8" astOperand2="02A33A78"/>
+    <token id="02A33EF8" file="ADC.c" linenr="18" column="11" str="(" scope="02A345F0" link="02A33778"/>
+    <token id="02A33F78" file="ADC.c" linenr="18" column="12" str="1" scope="02A345F0" type="number" isInt="True" values="00BF7D98" astParent="02A341B8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A341B8" file="ADC.c" linenr="18" column="13" str="&lt;&lt;" scope="02A345F0" type="op" isArithmeticalOp="True" astParent="02A33B38" astOperand1="02A33F78" astOperand2="02A34278" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A34278" file="ADC.c" linenr="18" column="15" str="ADPS0" scope="02A345F0" type="name" astParent="02A341B8"/>
+    <token id="02A33778" file="ADC.c" linenr="18" column="20" str=")" scope="02A345F0" link="02A33EF8"/>
+    <token id="02A33B38" file="ADC.c" linenr="18" column="21" str="|" scope="02A345F0" type="op" astParent="02A33A78" astOperand1="02A341B8" astOperand2="02A339F8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A33C78" file="ADC.c" linenr="18" column="22" str="(" scope="02A345F0" link="02A33D38"/>
+    <token id="02A337B8" file="ADC.c" linenr="18" column="23" str="1" scope="02A345F0" type="number" isInt="True" values="00BF7E78" astParent="02A339F8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A339F8" file="ADC.c" linenr="18" column="24" str="&lt;&lt;" scope="02A345F0" type="op" isArithmeticalOp="True" astParent="02A33B38" astOperand1="02A337B8" astOperand2="02A338F8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A338F8" file="ADC.c" linenr="18" column="26" str="ADPS1" scope="02A345F0" type="name" astParent="02A339F8"/>
+    <token id="02A33D38" file="ADC.c" linenr="18" column="31" str=")" scope="02A345F0" link="02A33C78"/>
+    <token id="02A33A78" file="ADC.c" linenr="18" column="32" str="|" scope="02A345F0" type="op" astParent="02A33EB8" astOperand1="02A33B38" astOperand2="02A336F8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A335B8" file="ADC.c" linenr="18" column="33" str="(" scope="02A345F0" link="02A33678"/>
+    <token id="02A339B8" file="ADC.c" linenr="18" column="34" str="1" scope="02A345F0" type="number" isInt="True" values="00BF7DA8" astParent="02A336F8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A336F8" file="ADC.c" linenr="18" column="35" str="&lt;&lt;" scope="02A345F0" type="op" isArithmeticalOp="True" astParent="02A33A78" astOperand1="02A339B8" astOperand2="02A33A38" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A33A38" file="ADC.c" linenr="18" column="37" str="ADPS2" scope="02A345F0" type="name" astParent="02A336F8"/>
+    <token id="02A33678" file="ADC.c" linenr="18" column="42" str=")" scope="02A345F0" link="02A335B8"/>
+    <token id="02A33AB8" file="ADC.c" linenr="18" column="43" str=";" scope="02A345F0"/>
+    <token id="02A337F8" file="ADC.c" linenr="19" column="1" str="}" scope="02A345F0" link="02A34138"/>
+    <token id="02A33AF8" file="ADC.c" linenr="21" column="10" str="char" scope="02A34558" type="name" isUnsigned="true"/>
+    <token id="02A33838" file="ADC.c" linenr="21" column="15" str="ADC_GetData" scope="02A34558" type="name" function="02C760A0" astParent="02A33738"/>
+    <token id="02A33738" file="ADC.c" linenr="21" column="26" str="(" scope="02A34558" link="02A33938" astOperand1="02A33838" astOperand2="02A336B8" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="02A33978" file="ADC.c" linenr="21" column="27" str="int" scope="02A34558" type="name"/>
+    <token id="02A336B8" file="ADC.c" linenr="21" column="31" str="canal" scope="02A34558" type="name" varId="2" variable="00C9E248" astParent="02A33738" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A33938" file="ADC.c" linenr="21" column="36" str=")" scope="02A34558" link="02A33738"/>
+    <token id="02A33B78" file="ADC.c" linenr="22" column="1" str="{" scope="02A34688" link="00C9E100"/>
+    <token id="02A33C38" file="ADC.c" linenr="24" column="2" str="ADMUX" scope="02A34688" type="name" astParent="02A33BB8"/>
+    <token id="02A33BB8" file="ADC.c" linenr="24" column="8" str="&amp;=" scope="02A34688" type="op" isAssignmentOp="True" astOperand1="02A33C38" astOperand2="02A33BF8"/>
+    <token id="02A33BF8" file="ADC.c" linenr="24" column="10" str="~" scope="02A34688" type="op" values="00BF7D38" astParent="02A33BB8" astOperand1="02A33CB8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A33CB8" file="ADC.c" linenr="24" column="13" str="0x0F" scope="02A34688" type="number" isInt="True" values="00BF7DE8" astParent="02A33BF8" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A33CF8" file="ADC.c" linenr="24" column="17" str=";" scope="02A34688"/>
+    <token id="02A335F8" file="ADC.c" linenr="25" column="2" str="ADMUX" scope="02A34688" type="name" astParent="02A33878"/>
+    <token id="02A33878" file="ADC.c" linenr="25" column="8" str="|=" scope="02A34688" type="op" isAssignmentOp="True" astOperand1="02A335F8" astOperand2="02A33578"/>
+    <token id="02A33578" file="ADC.c" linenr="25" column="12" str="canal" scope="02A34688" type="name" varId="2" variable="00C9E248" astParent="02A33878" valueType-type="int" valueType-sign="signed"/>
+    <token id="02A338B8" file="ADC.c" linenr="25" column="17" str=";" scope="02A34688"/>
+    <token id="00C9EFC0" file="ADC.c" linenr="28" column="2" str="ADCSRA" scope="02A34688" type="name" astParent="00C9EEC0"/>
+    <token id="00C9EEC0" file="ADC.c" linenr="28" column="9" str="|=" scope="02A34688" type="op" isAssignmentOp="True" astOperand1="00C9EFC0" astOperand2="00C9EF00"/>
+    <token id="00C9EF40" file="ADC.c" linenr="28" column="12" str="(" scope="02A34688" link="00C9EB40"/>
+    <token id="00C9E8C0" file="ADC.c" linenr="28" column="13" str="1" scope="02A34688" type="number" isInt="True" values="00BF7D48" astParent="00C9EF00" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9EF00" file="ADC.c" linenr="28" column="14" str="&lt;&lt;" scope="02A34688" type="op" isArithmeticalOp="True" astParent="00C9EEC0" astOperand1="00C9E8C0" astOperand2="00C9EDC0" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9EDC0" file="ADC.c" linenr="28" column="16" str="ADEN" scope="02A34688" type="name" astParent="00C9EF00"/>
+    <token id="00C9EB40" file="ADC.c" linenr="28" column="20" str=")" scope="02A34688" link="00C9EF40"/>
+    <token id="00C9E9C0" file="ADC.c" linenr="28" column="21" str=";" scope="02A34688"/>
+    <token id="00C9EE80" file="ADC.c" linenr="29" column="2" str="_delay_us" scope="02A34688" type="name" astParent="00C9E840"/>
+    <token id="00C9E840" file="ADC.c" linenr="29" column="11" str="(" scope="02A34688" link="00C9E880" astOperand1="00C9EE80" astOperand2="00C9E980"/>
+    <token id="00C9E980" file="ADC.c" linenr="29" column="12" str="10" scope="02A34688" type="number" isInt="True" values="00BF7DB8" astParent="00C9E840" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9E880" file="ADC.c" linenr="29" column="14" str=")" scope="02A34688" link="00C9E840"/>
+    <token id="00C9EF80" file="ADC.c" linenr="29" column="15" str=";" scope="02A34688"/>
+    <token id="00C9EB80" file="ADC.c" linenr="32" column="2" str="ADCSRA" scope="02A34688" type="name" astParent="00C9ED00"/>
+    <token id="00C9ED00" file="ADC.c" linenr="32" column="9" str="|=" scope="02A34688" type="op" isAssignmentOp="True" astOperand1="00C9EB80" astOperand2="00C9E900"/>
+    <token id="00C9EC00" file="ADC.c" linenr="32" column="12" str="(" scope="02A34688" link="00C9EE00"/>
+    <token id="00C9EC40" file="ADC.c" linenr="32" column="13" str="1" scope="02A34688" type="number" isInt="True" values="00BF7DC8" astParent="00C9E900" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9E900" file="ADC.c" linenr="32" column="14" str="&lt;&lt;" scope="02A34688" type="op" isArithmeticalOp="True" astParent="00C9ED00" astOperand1="00C9EC40" astOperand2="00C9E940" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9E940" file="ADC.c" linenr="32" column="16" str="ADSC" scope="02A34688" type="name" astParent="00C9E900"/>
+    <token id="00C9EE00" file="ADC.c" linenr="32" column="20" str=")" scope="02A34688" link="00C9EC00"/>
+    <token id="00C9EA00" file="ADC.c" linenr="32" column="21" str=";" scope="02A34688"/>
+    <token id="00C9EA40" file="ADC.c" linenr="35" column="2" str="while" scope="02A34688" type="name" astParent="00C9EA80"/>
+    <token id="00C9EA80" file="ADC.c" linenr="35" column="7" str="(" scope="02A34688" link="00C9E440" astOperand1="00C9EA40" astOperand2="00C9ED40"/>
+    <token id="00C9ED40" file="ADC.c" linenr="35" column="9" str="!" scope="02A34688" type="op" isLogicalOp="True" astParent="00C9EA80" astOperand1="00C9EB00" valueType-type="bool"/>
+    <token id="00C9EAC0" file="ADC.c" linenr="35" column="10" str="(" scope="02A34688" link="00C9E380"/>
+    <token id="00C9EBC0" file="ADC.c" linenr="35" column="11" str="ADCSRA" scope="02A34688" type="name" astParent="00C9EB00"/>
+    <token id="00C9EB00" file="ADC.c" linenr="35" column="18" str="&amp;" scope="02A34688" type="op" astParent="00C9ED40" astOperand1="00C9EBC0" astOperand2="00C9ED80"/>
+    <token id="00C9EC80" file="ADC.c" linenr="35" column="20" str="(" scope="02A34688" link="00C9E5C0"/>
+    <token id="00C9ECC0" file="ADC.c" linenr="35" column="21" str="1" scope="02A34688" type="number" isInt="True" values="00BF7DD8" astParent="00C9ED80" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9ED80" file="ADC.c" linenr="35" column="22" str="&lt;&lt;" scope="02A34688" type="op" isArithmeticalOp="True" astParent="00C9EB00" astOperand1="00C9ECC0" astOperand2="00C9EE40" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9EE40" file="ADC.c" linenr="35" column="24" str="ADIF" scope="02A34688" type="name" astParent="00C9ED80"/>
+    <token id="00C9E5C0" file="ADC.c" linenr="35" column="28" str=")" scope="02A34688" link="00C9EC80"/>
+    <token id="00C9E380" file="ADC.c" linenr="35" column="29" str=")" scope="02A34688" link="00C9EAC0"/>
+    <token id="00C9E440" file="ADC.c" linenr="35" column="31" str=")" scope="02A34688" link="00C9EA80"/>
+    <token id="00C9E140" file="ADC.c" linenr="35" column="0" str="{" scope="02A88868" link="00C9E180"/>
+    <token id="00C9E640" file="ADC.c" linenr="35" column="32" str=";" scope="02A88868"/>
+    <token id="00C9E180" file="ADC.c" linenr="35" column="0" str="}" scope="02A88868" link="00C9E140"/>
+    <token id="00C9E3C0" file="ADC.c" linenr="36" column="2" str="ADCSRA" scope="02A34688" type="name" astParent="00C9E680"/>
+    <token id="00C9E680" file="ADC.c" linenr="36" column="9" str="|=" scope="02A34688" type="op" isAssignmentOp="True" astOperand1="00C9E3C0" astOperand2="00C9E6C0"/>
+    <token id="00C9E080" file="ADC.c" linenr="36" column="12" str="(" scope="02A34688" link="00C9E340"/>
+    <token id="00C9E300" file="ADC.c" linenr="36" column="13" str="1" scope="02A34688" type="number" isInt="True" values="00BF7DF8" astParent="00C9E6C0" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9E6C0" file="ADC.c" linenr="36" column="14" str="&lt;&lt;" scope="02A34688" type="op" isArithmeticalOp="True" astParent="00C9E680" astOperand1="00C9E300" astOperand2="00C9E800" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9E800" file="ADC.c" linenr="36" column="16" str="ADIF" scope="02A34688" type="name" astParent="00C9E6C0"/>
+    <token id="00C9E340" file="ADC.c" linenr="36" column="20" str=")" scope="02A34688" link="00C9E080"/>
+    <token id="00C9E400" file="ADC.c" linenr="36" column="21" str=";" scope="02A34688"/>
+    <token id="00C9E540" file="ADC.c" linenr="39" column="2" str="ADCSRA" scope="02A34688" type="name" astParent="00C9E700"/>
+    <token id="00C9E700" file="ADC.c" linenr="39" column="9" str="=" scope="02A34688" type="op" isAssignmentOp="True" astOperand1="00C9E540" astOperand2="00C9E580"/>
+    <token id="00C9E480" file="ADC.c" linenr="39" column="12" str="0" scope="02A34688" type="number" isInt="True" values="00CCF120" astParent="00C9E580" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9E580" file="ADC.c" linenr="39" column="13" str="&lt;&lt;" scope="02A34688" type="op" isArithmeticalOp="True" astParent="00C9E700" astOperand1="00C9E480" astOperand2="00C9E040" valueType-type="int" valueType-sign="signed"/>
+    <token id="00C9E040" file="ADC.c" linenr="39" column="15" str="ADEN" scope="02A34688" type="name" astParent="00C9E580"/>
+    <token id="00C9E740" file="ADC.c" linenr="39" column="20" str=";" scope="02A34688"/>
+    <token id="00C9E600" file="ADC.c" linenr="41" column="2" str="return" scope="02A34688" type="name" astOperand1="00C9E7C0" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="00C9E7C0" file="ADC.c" linenr="41" column="9" str="ADC" scope="02A34688" type="name" astParent="00C9E600"/>
+    <token id="00C9E2C0" file="ADC.c" linenr="41" column="12" str=";" scope="02A34688"/>
+    <token id="00C9E100" file="ADC.c" linenr="42" column="1" str="}" scope="02A34688" link="02A33B78"/>
+  </tokenlist>
+  <scopes>
+    <scope id="02A34558" type="Global">
+      <functionList>
+        <function id="02C74F18" tokenDef="00D78E78" name="ADC_init" type="Function"/>
+        <function id="02C760A0" tokenDef="00D78FB8" name="ADC_GetData" type="Function">
+          <arg nr="1" variable="00C9E248"/>
+        </function>
+      </functionList>
+    </scope>
+    <scope id="02A345F0" type="Function" className="ADC_init" bodyStart="02A34138" bodyEnd="02A337F8" nestedIn="02A34558" function="02C74F18"/>
+    <scope id="02A34688" type="Function" className="ADC_GetData" bodyStart="02A33B78" bodyEnd="00C9E100" nestedIn="02A34558" function="02C760A0"/>
+    <scope id="02A88868" type="While" bodyStart="00C9E140" bodyEnd="00C9E180" nestedIn="02A34688"/>
+  </scopes>
+  <variables>
+    <var id="00C9E248" nameToken="02A336B8" typeStartToken="02A33978" typeEndToken="02A33978" access="Argument" scope="02A34688" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+  </variables>
+  <valueflow>
+    <values id="00BF7CE8">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="00BF7D28">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="00BF7E08">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="00BF7D98">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="00BF7E78">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="00BF7DA8">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="00BF7D38">
+      <value intvalue="-16" known="true"/>
+    </values>
+    <values id="00BF7DE8">
+      <value intvalue="15" known="true"/>
+    </values>
+    <values id="00BF7D48">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="00BF7DB8">
+      <value intvalue="10" known="true"/>
+    </values>
+    <values id="00BF7DC8">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="00BF7DD8">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="00BF7DF8">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="00CCF120">
+      <value intvalue="0" known="true"/>
+    </values>
+  </valueflow>
+</dump>
+</dumps>
