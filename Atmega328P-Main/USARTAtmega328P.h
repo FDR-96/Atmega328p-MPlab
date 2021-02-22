@@ -10,6 +10,6 @@
 
 
 void USART_init();
-void USART_SetData(char Tx);
+void USART_SetData(unsigned char Tx);
 unsigned char USART_GetData();
 #endif 
