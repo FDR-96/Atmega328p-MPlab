@@ -12,13 +12,15 @@
 #include <stdbool.h>
 #include "USARTAtmega328P.h"
 unsigned char TxA = '#';
+unsigned char TxB = '1';
 void main(void) {
     cli();
     USART_init();
     sei();
     while(1)
     {
-        
+        USART_SetData(TxB);
+                    
         switch(USART_GetData())
         {
             case('#'):
