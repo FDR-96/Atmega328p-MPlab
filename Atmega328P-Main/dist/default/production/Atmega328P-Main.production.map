@@ -432,29 +432,29 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1343
+.debug_info     0x0000000000000000     0x133f
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_info    0x00000000000005f4      0x430 build/default/production/main.o
- .debug_info    0x0000000000000a24      0x2d6 build/default/production/USARTAtmega328P.o
- .debug_info    0x0000000000000cfa      0x2f6 build/default/production/PWM.o
- .debug_info    0x0000000000000ff0      0x353 build/default/production/ADC.o
+ .debug_info    0x00000000000005f4      0x42c build/default/production/main.o
+ .debug_info    0x0000000000000a20      0x2d6 build/default/production/USARTAtmega328P.o
+ .debug_info    0x0000000000000cf6      0x2f6 build/default/production/PWM.o
+ .debug_info    0x0000000000000fec      0x353 build/default/production/ADC.o
 
-.debug_abbrev   0x0000000000000000      0x866
+.debug_abbrev   0x0000000000000000      0x857
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x5a2 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_abbrev  0x00000000000005a2       0xd4 build/default/production/main.o
- .debug_abbrev  0x0000000000000676       0x96 build/default/production/USARTAtmega328P.o
- .debug_abbrev  0x000000000000070c       0x7e build/default/production/PWM.o
- .debug_abbrev  0x000000000000078a       0xdc build/default/production/ADC.o
+ .debug_abbrev  0x00000000000005a2       0xc5 build/default/production/main.o
+ .debug_abbrev  0x0000000000000667       0x96 build/default/production/USARTAtmega328P.o
+ .debug_abbrev  0x00000000000006fd       0x7e build/default/production/PWM.o
+ .debug_abbrev  0x000000000000077b       0xdc build/default/production/ADC.o
 
-.debug_line     0x0000000000000000      0x5fe
+.debug_line     0x0000000000000000      0x5f8
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x137 C:/Users/ADICHIP 4/.mchp_packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_line    0x0000000000000137      0x1a8 build/default/production/main.o
- .debug_line    0x00000000000002df       0xee build/default/production/USARTAtmega328P.o
- .debug_line    0x00000000000003cd      0x110 build/default/production/PWM.o
- .debug_line    0x00000000000004dd      0x121 build/default/production/ADC.o
+ .debug_line    0x0000000000000137      0x1a2 build/default/production/main.o
+ .debug_line    0x00000000000002d9       0xee build/default/production/USARTAtmega328P.o
+ .debug_line    0x00000000000003c7      0x110 build/default/production/PWM.o
+ .debug_line    0x00000000000004d7      0x121 build/default/production/ADC.o
 
 .debug_frame    0x0000000000000000       0xfc
  *(.debug_frame)
@@ -471,11 +471,10 @@ END GROUP
  .debug_str     0x0000000000000240        0x0 build/default/production/PWM.o
  .debug_str     0x0000000000000240        0x0 build/default/production/ADC.o
 
-.debug_loc      0x0000000000000000      0x101
+.debug_loc      0x0000000000000000       0xcd
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x34 build/default/production/main.o
- .debug_loc     0x0000000000000034       0x7b build/default/production/PWM.o
- .debug_loc     0x00000000000000af       0x52 build/default/production/ADC.o
+ .debug_loc     0x0000000000000000       0x7b build/default/production/PWM.o
+ .debug_loc     0x000000000000007b       0x52 build/default/production/ADC.o
 
 .debug_macinfo
  *(.debug_macinfo)

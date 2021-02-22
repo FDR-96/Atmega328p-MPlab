@@ -43,9 +43,7 @@ void main(void) {
         PWM_on();
     
         while(UCSR0A & (1<<RXC0));
-        Rx = UDR0;
-        
-        switch(Rx)
+        switch(UDR0)
         {
             case('#'):
                         while (!( UCSR0A & (1<<UDRE0)));
