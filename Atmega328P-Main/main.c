@@ -34,12 +34,12 @@ void main(void) {
     char txa;
     unsigned char Rx;
     while(1) {  
-        char adcV = ADC_GetData(0)*5.0f/1024.0f;
-       
+        long adcV = ADC_GetData(0)*5.0f/1024.0f;
+        txa = adcV;
         PWM_setDuty(20);
         PWM_on();
         while (!( UCSR0A & (1<<UDRE0)));
-        UDR0 = adcV;
+        UDR0 = txa;
         while(UCSR0A & (1<<RXC0));
         Rx = UDR0;
         while (!( UCSR0A & (1<<UDRE0)));
