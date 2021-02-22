@@ -31,11 +31,11 @@ void main(void) {
     int unidad = 0;
     int valor = 0;
     unsigned char tx = '#';
-   
+    char txa;
     unsigned char Rx;
     while(1) {  
-        float adcV = ADC_GetData(0)*5.0f/1024.0f;
-    
+        char adcV = ADC_GetData(0)*5.0f/1024.0f;
+       
         PWM_setDuty(20);
         PWM_on();
         while (!( UCSR0A & (1<<UDRE0)));
