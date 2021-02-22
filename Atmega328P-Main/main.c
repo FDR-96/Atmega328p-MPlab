@@ -47,13 +47,14 @@ void main(void) {
         {
             case('#'):
                         while (!( UCSR0A & (1<<UDRE0)));
-                        PORTB = (1<<PB5);
-                        UDR0 = tx;     
+                        UDR0 = tx;
+                        PORTB = (0<<PB5);
                 break;
             case('%'):  
                         while (!( UCSR0A & (1<<UDRE0)));
-                        PORTB = (0<<PB5);
+                        
                         UDR0 = ADC_GetData(0);   
+                        PORTB = (0<<PB5);
                 break;
             case('?'):  // Caracter modificador de frecuencia
                         PWM_off();
@@ -82,7 +83,7 @@ void main(void) {
             default  :
                         while (!( UCSR0A & (1<<UDRE0)));
                         
-                        UDR0 = Rx;
+                        UDR0 = ADC_GetData(0);   
                         PORTB = (1<<PB5);
 						break;
                         
