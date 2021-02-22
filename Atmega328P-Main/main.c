@@ -20,14 +20,7 @@ void main(void) {
     PWM_init(10);
     USART_init();
     sei();
-    char TxA = '#'; // Caracter de verificacion de conexion
-    char TxB = '%'; // Caracter de estado de bateria
-    char TxC = '$'; // Caracter de lectura ADC corriente
-    char TxD = '&'; // Caracter de lectura de Tension
-    char TxE = '?'; // Caracter modificador de frecuencia
-    char TxF = '¿'; // Caracter modificador de ancho de pulso
-    char TxG = '('; // Caracter de encendido del PWM
-    char TxH = ')'; // Caracter de Apagado del PWM
+
     int decena = 0;
     int unidad = 0;
     int valor = 0;
@@ -35,14 +28,15 @@ void main(void) {
         float adcV = ADC_GetData(0)*5.0f/1024.0f;
         PWM_setDuty(20);
         PWM_on();
+        USART_SetData('ON');
         switch(USART_GetData())
         {
             case('#'):
-                        USART_SendData(TxA);      
+                        USART_SetData('#');      
                 break;
             case('%'):  
                        
-                        USART_SendData(adcV);
+                        USART_SetData(adcV);
                 break;
             case('?'):  // Caracter modificador de frecuencia
                         PWM_off();
@@ -53,7 +47,7 @@ void main(void) {
                         }
                         PWM_init(valor);
                         PWM_on();
-                        USART_SendData(TxE);
+                        USART_SetData('?');
                 break;
             case('¿'):  // Caracter modificador de ancho de pulso
                         PWM_off();
@@ -64,7 +58,7 @@ void main(void) {
                         }
                         PWM_setDuty(valor);
                         PWM_on();
-                        USART_SendData(TxF);
+                        USART_SetData('¿');
                 break;
       
                             

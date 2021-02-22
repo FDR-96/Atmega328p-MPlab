@@ -11,5 +11,5 @@
 
 void USART_init();
 void USART_SetData(char Tx);
-char USART_GetData();
+unsigned char USART_GetData();
 #endif 
