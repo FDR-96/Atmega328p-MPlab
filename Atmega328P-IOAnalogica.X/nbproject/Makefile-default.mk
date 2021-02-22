@@ -94,26 +94,26 @@ MP_PROCESSOR_OPTION=ATmega328P
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/main.o: main.c  .generated_files/9ba123269c1cbfc26e59606e4b2cfb2c087f949.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/main.o: main.c  .generated_files/459b63d34860c4be573ca05aa3f58ff55f776e2c.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o -o ${OBJECTDIR}/main.o main.c 
 	
-${OBJECTDIR}/ADC.o: ADC.c  .generated_files/d6fd65e0214d3327a206b53da827b5c6e7467864.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/ADC.o: ADC.c  .generated_files/fe3959b737961097ec1325206968774d17c12106.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ADC.o.d 
 	@${RM} ${OBJECTDIR}/ADC.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC.o.d" -MT "${OBJECTDIR}/ADC.o.d" -MT ${OBJECTDIR}/ADC.o -o ${OBJECTDIR}/ADC.o ADC.c 
 	
 else
-${OBJECTDIR}/main.o: main.c  .generated_files/cedda41055b12230783c0601d2997c3735c6877e.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/main.o: main.c  .generated_files/1975892d373006a60d54491bb6f757ae563d8322.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o -o ${OBJECTDIR}/main.o main.c 
 	
-${OBJECTDIR}/ADC.o: ADC.c  .generated_files/bbab163f14c9751b2c21cb3784c00548ff7360ea.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/ADC.o: ADC.c  .generated_files/f392a600d7c8ed5cef616371ae732e2f704e4bc3.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ADC.o.d 
 	@${RM} ${OBJECTDIR}/ADC.o 

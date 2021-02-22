@@ -10,8 +10,8 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdbool.h>
-#include <USARTAtmega328P.h>
-unsigned long TxA = '#';
+#include "USARTAtmega328P.h"
+unsigned char TxA = '#';
 void main(void) {
     USART_init();
     while(1)

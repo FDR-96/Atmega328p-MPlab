@@ -94,26 +94,26 @@ MP_PROCESSOR_OPTION=ATmega328P
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/main.o: main.c  .generated_files/ad455e207454db51e52fc9ff4b30ea45856499e3.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/main.o: main.c  .generated_files/27c8903cd2bf9eb787c82fffcdf07f939e0424cf.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o -o ${OBJECTDIR}/main.o main.c 
 	
-${OBJECTDIR}/PWM.o: PWM.c  .generated_files/5331e7f0293f0d8fea9ed81bfa07d18c192e7005.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/PWM.o: PWM.c  .generated_files/9525e80e9697611149ce324c5ef03022799a53b5.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/PWM.o.d 
 	@${RM} ${OBJECTDIR}/PWM.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/PWM.o.d" -MT "${OBJECTDIR}/PWM.o.d" -MT ${OBJECTDIR}/PWM.o -o ${OBJECTDIR}/PWM.o PWM.c 
 	
 else
-${OBJECTDIR}/main.o: main.c  .generated_files/9734024cc634a9d8d63d2294a12b255118ef60cd.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/main.o: main.c  .generated_files/28cdff31989b4793b431bd090a62e9cbe0d63721.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o -o ${OBJECTDIR}/main.o main.c 
 	
-${OBJECTDIR}/PWM.o: PWM.c  .generated_files/fc4c382ff09d6638cd1ef283526ed6083ad428cf.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/PWM.o: PWM.c  .generated_files/b388531a0d66d90fa7199372dfbde46144b48a9b.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/PWM.o.d 
 	@${RM} ${OBJECTDIR}/PWM.o 

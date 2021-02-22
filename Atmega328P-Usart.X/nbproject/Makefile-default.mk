@@ -94,26 +94,26 @@ MP_PROCESSOR_OPTION=ATmega328P
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/main.o: main.c  .generated_files/e75484bfbeb76429b7fe95a00790a98af61571e.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/main.o: main.c  .generated_files/4003ada15868a8f949e6e82929d237de37e5fb7a.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o -o ${OBJECTDIR}/main.o main.c 
 	
-${OBJECTDIR}/USARTAtmega328P.o: USARTAtmega328P.c  .generated_files/75c926244412e3bfd049085e104920ac8c51b460.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/USARTAtmega328P.o: USARTAtmega328P.c  .generated_files/334b97dcc2b181c4e8fa6f29de3c9bb0c5b015c6.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/USARTAtmega328P.o.d 
 	@${RM} ${OBJECTDIR}/USARTAtmega328P.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/USARTAtmega328P.o.d" -MT "${OBJECTDIR}/USARTAtmega328P.o.d" -MT ${OBJECTDIR}/USARTAtmega328P.o -o ${OBJECTDIR}/USARTAtmega328P.o USARTAtmega328P.c 
 	
 else
-${OBJECTDIR}/main.o: main.c  .generated_files/1da98e0b3d61b7268bcda92f52752a825a4c208e.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/main.o: main.c  .generated_files/cdd2af7dac7c71672cc59ba93134cfa2c7ab5498.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o -o ${OBJECTDIR}/main.o main.c 
 	
-${OBJECTDIR}/USARTAtmega328P.o: USARTAtmega328P.c  .generated_files/40963bf302651d05e4a8659662b9a742336efdf3.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
+${OBJECTDIR}/USARTAtmega328P.o: USARTAtmega328P.c  .generated_files/f28789301dcf9d884d5a0a845e9d708f83f9ac0d.flag .generated_files/d8278ee61c4b2ee729e50eb83d08885c0c085ceb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/USARTAtmega328P.o.d 
 	@${RM} ${OBJECTDIR}/USARTAtmega328P.o 
