@@ -30,25 +30,22 @@ void main(void) {
     UCSR0C = (1<<USBS0)|(3<<UCSZ00);
     sei();
 
-    int decena = 0;
-    int unidad = 0;
-    int valor = 0;
     unsigned char tx = '#';
-    char txa;
-    char Rx;
+   
     while(1) {  
         long adcV = ADC_GetData(0)*5.0f/1024.0f;
-        txa = adcV;
+     
         PWM_setDuty(20);
         PWM_on();
     
         while(UCSR0A & (1<<RXC0));
+        
         switch(UDR0)
         {
             case('#'):
                         while (!( UCSR0A & (1<<UDRE0)));
                         UDR0 = tx;
-                        PORTB = (0<<PB5);
+                        PORTB = (1<<PB5);
                 break;
             case('%'):  
                         while (!( UCSR0A & (1<<UDRE0)));
@@ -56,35 +53,9 @@ void main(void) {
                         UDR0 = ADC_GetData(0);   
                         PORTB = (0<<PB5);
                 break;
-            case('?'):  // Caracter modificador de frecuencia
-                        PWM_off();
-                        for(int i = 0; i == 2;i++){
-                            decena = USART_GetData();
-                            unidad = USART_GetData();
-                            valor = ((decena*10)+unidad);
-                        }
-                        PWM_init(valor);
-                        PWM_on();
-                        USART_SetData('?');
-                break;
-            case('¿'):  // Caracter modificador de ancho de pulso
-                        PWM_off();
-                        for(int i = 0; i == 2;i++){
-                            decena = USART_GetData();
-                            unidad = USART_GetData();
-                            valor = ((decena*10)+unidad);
-                        }
-                        PWM_setDuty(valor);
-                        PWM_on();
-                        USART_SetData('¿');
-                break;
-      
-                            
+           
             default  :
-                        while (!( UCSR0A & (1<<UDRE0)));
-                        
-                        UDR0 = ADC_GetData(0);   
-                        PORTB = (1<<PB5);
+                    
 						break;
                         
         }
