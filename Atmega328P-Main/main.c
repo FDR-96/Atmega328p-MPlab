@@ -35,7 +35,7 @@ void main(void) {
     int valor = 0;
     unsigned char tx = '#';
     char txa;
-    unsigned char Rx;
+    char Rx;
     while(1) {  
         long adcV = ADC_GetData(0)*5.0f/1024.0f;
         txa = adcV;
