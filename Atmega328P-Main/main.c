@@ -24,15 +24,16 @@ void main(void) {
     int decena = 0;
     int unidad = 0;
     int valor = 0;
+    unsigned char tx = '#';
     while(1) {  
         float adcV = ADC_GetData(0)*5.0f/1024.0f;
         PWM_setDuty(20);
         PWM_on();
-        USART_SetData('x');
+        USART_SetData(tx);
         switch(USART_GetData())
         {
             case('#'):
-                        USART_SetData('#');      
+                        USART_SetData(tx);      
                 break;
             case('%'):  
                        
