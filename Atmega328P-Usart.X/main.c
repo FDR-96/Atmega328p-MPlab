@@ -13,15 +13,16 @@
 #include "USARTAtmega328P.h"
 unsigned char TxA = '#';
 char TxB = '1';
+unsigned char Rx;
 void main(void) {
     cli();
     USART_init();
     sei();
+    
     while(1)
     {
-        USART_SetData(TxB);
-        USART_SetData('#');        
-        switch(USART_GetData())
+        Rx = USART_GetData();
+        switch(Rx)
         {
             case('#'):
                         USART_SetData(TxA);
