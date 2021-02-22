@@ -38,8 +38,12 @@ void main(void) {
     
         PWM_setDuty(20);
         PWM_on();
+        while (!( UCSR0A & (1<<UDRE0)));
+        UDR0 = adcV;
         while(UCSR0A & (1<<RXC0));
-        Rx = UDR0;;
+        Rx = UDR0;
+        while (!( UCSR0A & (1<<UDRE0)));
+        UDR0 = tx;
         switch(Rx)
         {
             case('#'):
