@@ -29,7 +29,7 @@ void main(void) {
         float adcV = ADC_GetData(0)*5.0f/1024.0f;
         PWM_setDuty(20);
         PWM_on();
-        USART_SetData(tx);
+       
         switch(USART_GetData())
         {
             case('#'):
