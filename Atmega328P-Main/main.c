@@ -19,6 +19,8 @@
 #define MYUBRR FOSC/16/BAUD-1
 void main(void) {
     cli();
+    DDRB = (1<<PB5);
+    PORTB = (0<<PB5);
     ADC_init();
     PWM_init(10);
     unsigned int ubrr = MYUBRR;
@@ -42,16 +44,18 @@ void main(void) {
     
         while(UCSR0A & (1<<RXC0));
         Rx = UDR0;
-    
+        
         switch(Rx)
         {
             case('#'):
                         while (!( UCSR0A & (1<<UDRE0)));
+                        PORTB = (1<<PB5);
                         UDR0 = tx;     
                 break;
             case('%'):  
                         while (!( UCSR0A & (1<<UDRE0)));
-                        UDR0 = ADC_GetData(0);;     
+                        PORTB = (0<<PB5);
+                        UDR0 = ADC_GetData(0);   
                 break;
             case('?'):  // Caracter modificador de frecuencia
                         PWM_off();
