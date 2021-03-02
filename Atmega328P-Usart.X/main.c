@@ -12,11 +12,14 @@
 #include <stdbool.h>
 #include "USARTAtmega328P.h"
 unsigned char TxA = '#';
-char TxB = '1';
+char TxB = '%';
 unsigned char Rx;
-void main(void) {
+void main(void) 
+{
     cli();
     USART_init();
+    DDRB = (1<<PB5);
+    PORTB = (0<<PB5);
     sei();
     
     while(1)
@@ -28,6 +31,10 @@ void main(void) {
                         USART_SetData(TxA);
                     
                 break;
+            case('%'):
+                        USART_SetData(TxA);
+                        PORTB = (1<<PB5);
+                break;
                                    
             default  :
                      
@@ -36,3 +43,4 @@ void main(void) {
         }
         
     }    
+}
