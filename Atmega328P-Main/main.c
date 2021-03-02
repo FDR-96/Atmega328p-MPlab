@@ -47,12 +47,7 @@ void main(void) {
                         UDR0 = tx;
                         PORTB = (1<<PB5);
                 break;
-            case('%'):  
-                        while (!( UCSR0A & (1<<UDRE0)));
-                        
-                        UDR0 = ADC_GetData(0);   
-                        PORTB = (0<<PB5);
-                break;
+
            
             default  :
                     
