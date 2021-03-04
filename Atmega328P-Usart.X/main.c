@@ -11,36 +11,38 @@
 #include <avr/interrupt.h>
 #include <stdbool.h>
 #include "USARTAtmega328P.h"
+unsigned char data[] = "%32 ";
 unsigned char TxA = '#';
-char TxB = '%';
-unsigned char Rx;
-void main(void) 
+
+int i=1;
+void main(void)       
 {
     cli();
     USART_init();
     DDRB = (1<<PB5);
-    PORTB = (0<<PB5);
+    PORTB = (1<<PB5);
     sei();
     
-    while(1)
+    for(;;)
     {
-        Rx = USART_GetData();
-        switch(Rx)
+        switch(USART_GetData())
         {
-            case('#'):
-                        USART_SetData(TxA);
-                    
+            case '#':
+                USART_SetData(TxA);
+                PORTB = (0<<PB5);
                 break;
-            case('%'):
-                        USART_SetData(TxA);
-                        PORTB = (1<<PB5);
+            case '%':
+                while(i <= 3)
+                {
+                USART_SetData(data[i]);
+                i++;
+                }
+                i = 1;
+                 PORTB = (1<<PB5);
+                   break;
+            default:
                 break;
-                                   
-            default  :
-                     
-						break;
-                        
         }
-        
+   
     }    
 }

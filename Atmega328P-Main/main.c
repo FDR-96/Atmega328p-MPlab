@@ -12,47 +12,55 @@
 #include <stdbool.h>
 #include "ADC.h"
 #include "PWM.h"
-
 #include "USARTAtmega328P.h"
-#define FOSC 16000000
-#define BAUD 9600
-#define MYUBRR FOSC/16/BAUD-1
+float adcV;
+
+unsigned char TxA = 'H';
+unsigned char Bateria[3] = "   \0";
+int tempAdcA;
+int tempAdcB;
+int tempAdcC;
+int i = 0;
 void main(void) {
     cli();
-    DDRB = (1<<PB5);
-    PORTB = (0<<PB5);
     ADC_init();
     PWM_init(10);
-    unsigned int ubrr = MYUBRR;
-    UBRR0H = (unsigned char)(ubrr>>8);
-    UBRR0L = (unsigned char)ubrr;  
-    UCSR0B = (1<<RXEN0)|(1<<TXEN0);
-    UCSR0C = (1<<USBS0)|(3<<UCSZ00);
+    USART_init();
     sei();
-
-    unsigned char tx = '#';
+    DDRB = (1<<PB5);
+    PORTB = (0<<PB5);
+       
    
     while(1) {  
-        long adcV = ADC_GetData(0)*5.0f/1024.0f;
-     
+ 
+        adcV = ADC_GetData(0)*5.0f/1024.0f;
+        tempAdcA = (adcV/100) + 48;
+        Bateria[0] =  tempAdcA;
+        tempAdcB = (((tempAdcA*100)-adcV)/10)+ 48;
+        Bateria[1] =  tempAdcB;
+        tempAdcC = (((tempAdcA*100))+((tempAdcB*10))-adcV) + 48;
+        Bateria[2] =  tempAdcC;
+        
         PWM_setDuty(20);
         PWM_on();
-    
-        while(UCSR0A & (1<<RXC0));
         
-        switch(UDR0)
+       
+      switch(USART_GetData())
         {
-            case('#'):
-                        while (!( UCSR0A & (1<<UDRE0)));
-                        UDR0 = tx;
-                        PORTB = (1<<PB5);
+            case 'H':
+                USART_SetData(TxA);
+                PORTB = (0<<PB5);
                 break;
-
-           
-            default  :
-                    
-						break;
-                        
+            case '%':
+                while(i <= 3){
+                USART_SetData(Bateria[i]);
+                i++;
+                }
+                i=0;
+                PORTB = (1<<PB5);
+                break;
+            default:
+                break;
         }
     }
 
