@@ -13,6 +13,6 @@
 #include <util/delay.h>
 
 void ADC_init();
-unsigned char ADC_GetData(int canal);
+int ADC_GetData(int canal);
 
 #endif /* ADC_H_ */

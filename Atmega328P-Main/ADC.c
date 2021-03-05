@@ -18,7 +18,7 @@ void ADC_init()
 	ADCSRA = (1<<ADPS0)|(1<<ADPS1)|(1<<ADPS2);
 }
 
-unsigned char ADC_GetData(int canal)
+int ADC_GetData(int canal)
 {
 	// Selección del canal de lADC //
 	ADMUX &=~  0x0F;
