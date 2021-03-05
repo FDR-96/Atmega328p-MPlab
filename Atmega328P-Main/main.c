@@ -33,7 +33,7 @@ void main(void) {
    
     while(1) {  
  
-   
+        adcV = ADC_GetData(0)*5/1024;
         
         PWM_setDuty(20);
         PWM_on();
@@ -47,15 +47,15 @@ void main(void) {
                 break;
             case '%':
                
-                tempAdcA = (ADC_GetData(0)/100) + 48;
+                tempAdcA = (adcV/100) + 48;
                 Bateria[0] =  tempAdcA;
-                tempAdcB = (((tempAdcA*100)-ADC_GetData(0))/10)+ 48;
+                tempAdcB = ((tempAdcA*100)-adcV/10)+ 48;
                 Bateria[1] =  tempAdcB;
-                tempAdcC = (((tempAdcA*100))+((tempAdcB*10))-ADC_GetData(0))+ 48;
+                tempAdcC = (((tempAdcA*100))+((tempAdcB*10))-adcV)+ 48;
                 Bateria[2] =  tempAdcC;
                 while(i <= 3){
                 USART_SetData( Bateria[i]);                          
-         
+                i++;
                 }
                 i=0;
                 PORTB = (1<<PB5);
