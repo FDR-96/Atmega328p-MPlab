@@ -2,7 +2,7 @@
  * ADC.c
  *
  * Created: 26/03/2019 06:43:35 p.m.
- *  Author: Marlon
+ *  Author: FDR-96
  */ 
 #include "ADC.h"
 
@@ -20,7 +20,7 @@ void ADC_init()
 
 int ADC_GetData(int canal)
 {
-	// Selección del canal de lADC //
+	// SelecciÃ³n del canal de lADC //
 	ADMUX &=~  0x0F;
 	ADMUX |=  canal;
 	
