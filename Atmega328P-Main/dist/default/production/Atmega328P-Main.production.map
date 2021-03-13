@@ -518,13 +518,13 @@ END GROUP
  .debug_abbrev  0x00000000000006fc       0x96 build/default/production/USARTAtmega328P.o
  .debug_abbrev  0x0000000000000792       0xb6 build/default/production/main.o
 
-.debug_line     0x0000000000000000      0x678
+.debug_line     0x0000000000000000      0x676
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x137 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_line    0x0000000000000137      0x121 build/default/production/ADC.o
- .debug_line    0x0000000000000258      0x110 build/default/production/PWM.o
- .debug_line    0x0000000000000368       0xee build/default/production/USARTAtmega328P.o
- .debug_line    0x0000000000000456      0x222 build/default/production/main.o
+ .debug_line    0x0000000000000137      0x11f build/default/production/ADC.o
+ .debug_line    0x0000000000000256      0x110 build/default/production/PWM.o
+ .debug_line    0x0000000000000366       0xee build/default/production/USARTAtmega328P.o
+ .debug_line    0x0000000000000454      0x222 build/default/production/main.o
 
 .debug_frame    0x0000000000000000       0xfc
  *(.debug_frame)

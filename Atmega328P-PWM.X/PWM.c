@@ -1,8 +1,8 @@
 /*
- * PWM.c
+ * File:   PWM.c
+ * Author: FDR-96
  *
- * Created: 16/03/2019 13:05:27
- *  Author: marlon
+ * Created on 21 de febrero de 2021, 19:44
  */ 
 
  #include "PWM.h"

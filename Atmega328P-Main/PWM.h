@@ -1,10 +1,8 @@
 /*
- * PWM.h
+ * File:   PWM.c
+ * Author: FDR-96
  *
- * Created: 16/03/2019 13:05:34
- *  Author: marlon
- */ 
-
+ */
 
 #ifndef PWM_H_
 #define PWM_H_

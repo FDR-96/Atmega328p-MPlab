@@ -1,9 +1,8 @@
 /*
- * ADC.h
+ * File:   ADC.c
+ * Author: FDR-96
  *
- * Created: 26/03/2019 06:43:42 p.m.
- *  Author: Marlon
- */ 
+ */
 
 
 #ifndef ADC_H_

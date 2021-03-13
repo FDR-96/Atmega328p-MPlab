@@ -1,9 +1,8 @@
 /*
- * ADC.c
+ * File:   ADC.c
+ * Author: FDR-96
  *
- * Created: 26/03/2019 06:43:35 p.m.
- *  Author: Marlon
- */ 
+ */
 #include "ADC.h"
 
 void ADC_init()

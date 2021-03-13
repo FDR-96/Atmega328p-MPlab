@@ -1,8 +1,7 @@
 /*
- * File:   USART.c
- * Author: ROLDAN
- *
- * Created on 21 de febrero de 2021, 19:44
+ * File:   USARTAtmega328P.c
+ * Author: FDR-96
+
  */
 
 

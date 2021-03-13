@@ -1,6 +1,6 @@
 /*
- * File:   newmain.c
- * Author: ADICHIP 4
+ * File:   main.c
+ * Author: FDR-96
  *
  * Created on 18 de febrero de 2021, 23:23
  */
