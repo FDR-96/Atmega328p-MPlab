@@ -2,7 +2,7 @@
  * ADC.h
  *
  * Created: 26/03/2019 06:43:42 p.m.
- *  Author: Marlon
+ *  Author: FDR-96
  */ 
 
 
