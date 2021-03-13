@@ -2,8 +2,14 @@
  * File:   ADC.c
  * Author: FDR-96
  *
+<<<<<<< HEAD
  */
 
+=======
+ * Created: 26/03/2019 06:43:42 p.m.
+ *  Author: FDR-96
+ */ 
+>>>>>>> Inicio
 
 
 #ifndef ADC_H_
