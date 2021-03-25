@@ -10,8 +10,9 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdbool.h>
+#include <avr/wdt.h>
 #include "ADC.h"
-#include "PWM.h"    
+#include "PWM.h"  
 #include "USARTAtmega328P.h"
 float  adcV;
 float maximo = 3.7;
@@ -28,7 +29,9 @@ void main(void) {
     ADC_init();
     PWM_init(10);
     USART_init();
+    
     sei();
+    
     DDRB = (1<<PB5);
     PORTB = (0<<PB5);
     PWM_setDuty(20);
