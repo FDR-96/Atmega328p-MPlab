@@ -9,7 +9,7 @@
 #include <xc.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
-
+#include "PCINT.h"
 
 ISR (PCINT2_vect) { //D0 a D7
     
@@ -18,5 +18,12 @@ ISR (PCINT1_vect) { //A0 a D5
     
 }
 void main(void) {
-    return;
+    cli();
+    PCINT_init();
+    DDRB = (1<<PINB4);
+    sei();
+    while(1){
+    
+    
+    }
 }
