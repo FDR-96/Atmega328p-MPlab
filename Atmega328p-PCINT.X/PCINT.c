@@ -11,5 +11,6 @@
 void PCINT_init()
 {
     PCICR |= _BV(PCIE0);
+     PCIFR |= (1 << PCIF0);
 	PCMSK2 |= _BV(PCINT0);
 }

@@ -3,6 +3,6 @@
 #define	PCINT_H
 
 #include <xc.h> 
-void PWM_init();
+void PCINT_init();
 
 #endif 
