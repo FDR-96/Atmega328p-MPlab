@@ -12,9 +12,15 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="ledmatrix7219p88" projectFiles="true">
+        <itemPath>ledmatrix7219d88.c</itemPath>
+        <itemPath>ledmatrix7219d88.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="max7219" projectFiles="true">
+        <itemPath>max7219.h</itemPath>
+        <itemPath>max7219.c</itemPath>
+      </logicalFolder>
       <itemPath>main.c</itemPath>
-      <itemPath>kbrd.c</itemPath>
-      <itemPath>kbrd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
