@@ -25,6 +25,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/production/Max7219.o
  .data          0x0000000000000000        0x0 build/default/production/Max7219.o
  .bss           0x0000000000000000        0x0 build/default/production/Max7219.o
+ .text.Display_Test
+                0x0000000000000000       0x18 build/default/production/Max7219.o
  .text.Display_Decode
                 0x0000000000000000       0x18 build/default/production/Max7219.o
  .text.Display_Intensity
@@ -33,8 +35,6 @@ Discarded input sections
                 0x0000000000000000       0x18 build/default/production/Max7219.o
  .text.Display_Shutdown
                 0x0000000000000000       0x18 build/default/production/Max7219.o
- .text.Display_Digit
-                0x0000000000000000       0x16 build/default/production/Max7219.o
  .text.Display_Clear
                 0x0000000000000000       0x16 build/default/production/Max7219.o
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
@@ -375,12 +375,12 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0xfff
+.debug_info     0x0000000000000000     0x1004
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_info    0x00000000000005f4      0x2b2 build/default/production/main.o
- .debug_info    0x00000000000008a6      0x28b build/default/production/spi.o
- .debug_info    0x0000000000000b31      0x4ce build/default/production/Max7219.o
+ .debug_info    0x00000000000005f4      0x2b7 build/default/production/main.o
+ .debug_info    0x00000000000008ab      0x28b build/default/production/spi.o
+ .debug_info    0x0000000000000b36      0x4ce build/default/production/Max7219.o
 
 .debug_abbrev   0x0000000000000000      0x766
  *(.debug_abbrev)
@@ -402,12 +402,12 @@ END GROUP
  .debug_frame   0x0000000000000024       0x34 build/default/production/spi.o
  .debug_frame   0x0000000000000058       0xbc build/default/production/Max7219.o
 
-.debug_str      0x0000000000000000      0x22b
+.debug_str      0x0000000000000000      0x22c
  *(.debug_str)
  .debug_str     0x0000000000000000      0x208 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_str     0x0000000000000208       0x16 build/default/production/main.o
- .debug_str     0x000000000000021e        0x0 build/default/production/spi.o
- .debug_str     0x000000000000021e        0xd build/default/production/Max7219.o
+ .debug_str     0x0000000000000208       0x17 build/default/production/main.o
+ .debug_str     0x000000000000021f        0x0 build/default/production/spi.o
+ .debug_str     0x000000000000021f        0xd build/default/production/Max7219.o
 
 .debug_loc      0x0000000000000000      0x167
  *(.debug_loc)
@@ -449,15 +449,15 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x40 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
 
-.text.Display_Test
-                0x00000000000000bc       0x18
- .text.Display_Test
-                0x00000000000000bc       0x18 build/default/production/Max7219.o
-                0x00000000000000bc                Display_Test
+.text.Display_Digit
+                0x00000000000000bc       0x16
+ .text.Display_Digit
+                0x00000000000000bc       0x16 build/default/production/Max7219.o
+                0x00000000000000bc                Display_Digit
 
-.text.main      0x00000000000000d4       0x10
- .text.main     0x00000000000000d4       0x10 build/default/production/main.o
-                0x00000000000000d4                main
+.text.main      0x00000000000000d2       0x12
+ .text.main     0x00000000000000d2       0x12 build/default/production/main.o
+                0x00000000000000d2                main
 
 .text.SPI_transfer
                 0x00000000000000e4        0xc

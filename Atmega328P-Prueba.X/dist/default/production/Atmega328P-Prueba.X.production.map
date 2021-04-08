@@ -6,18 +6,10 @@ c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-cons
                               c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_divmodsi4.o) (__negsi2)
 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
                               C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o (exit)
-c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
-                              build/default/production/max7219.o (__tablejump2__)
 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
                               build/default/production/main.o (__do_copy_data)
 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_udivmodsi4.o)
                               c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_divmodsi4.o) (__udivmodsi4)
-
-Allocating common symbols
-Common symbol       size              file
-
-ledmatrix7219d88_data
-                    0x10              build/default/production/ledmatrix7219d88.o
 
 Discarded input sections
 
@@ -26,85 +18,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/production/main.o
  .data          0x0000000000000000        0x0 build/default/production/main.o
  .bss           0x0000000000000000        0x0 build/default/production/main.o
- .text          0x0000000000000000        0x0 build/default/production/ledmatrix7219d88.o
- .data          0x0000000000000000        0x0 build/default/production/ledmatrix7219d88.o
- .bss           0x0000000000000000        0x0 build/default/production/ledmatrix7219d88.o
- .text.ledmatrix7219d88_resetmatrix
-                0x0000000000000000       0x4a build/default/production/ledmatrix7219d88.o
- .text.ledmatrix7219d88_setmatrix
-                0x0000000000000000       0x68 build/default/production/ledmatrix7219d88.o
- .text.ledmatrix7219d88_setrow
-                0x0000000000000000       0x28 build/default/production/ledmatrix7219d88.o
- .text.ledmatrix7219d88_setled
-                0x0000000000000000       0x62 build/default/production/ledmatrix7219d88.o
- .text.ledmatrix7219d88_setledon
-                0x0000000000000000        0x8 build/default/production/ledmatrix7219d88.o
- .text.ledmatrix7219d88_setledoff
-                0x0000000000000000        0x8 build/default/production/ledmatrix7219d88.o
- .text.ledmatrix7219d88_setintensity
-                0x0000000000000000        0x6 build/default/production/ledmatrix7219d88.o
- .text.ledmatrix7219d88_init
-                0x0000000000000000       0x40 build/default/production/ledmatrix7219d88.o
- .debug_info    0x0000000000000000      0x71b build/default/production/ledmatrix7219d88.o
- .debug_abbrev  0x0000000000000000      0x133 build/default/production/ledmatrix7219d88.o
- .debug_loc     0x0000000000000000      0x312 build/default/production/ledmatrix7219d88.o
- .debug_aranges
-                0x0000000000000000       0x58 build/default/production/ledmatrix7219d88.o
- .debug_ranges  0x0000000000000000       0x48 build/default/production/ledmatrix7219d88.o
- .debug_line    0x0000000000000000      0x1fd build/default/production/ledmatrix7219d88.o
- .debug_str     0x0000000000000000       0x7d build/default/production/ledmatrix7219d88.o
- .comment       0x0000000000000000       0x30 build/default/production/ledmatrix7219d88.o
- .debug_frame   0x0000000000000000       0xdc build/default/production/ledmatrix7219d88.o
- COMMON         0x0000000000000000       0x10 build/default/production/ledmatrix7219d88.o
- .text          0x0000000000000000        0x0 build/default/production/max7219.o
- .data          0x0000000000000000        0x0 build/default/production/max7219.o
- .bss           0x0000000000000000        0x0 build/default/production/max7219.o
- .text.max7219_shiftout
-                0x0000000000000000       0x3e build/default/production/max7219.o
- .text.max7219_send
-                0x0000000000000000       0x52 build/default/production/max7219.o
- .text.max7219_shutdown
-                0x0000000000000000        0xe build/default/production/max7219.o
- .text.max7219_intensity
-                0x0000000000000000        0xe build/default/production/max7219.o
- .text.max7219_test
-                0x0000000000000000        0xe build/default/production/max7219.o
- .text.max7219_scanlimit
-                0x0000000000000000        0xe build/default/production/max7219.o
- .text.max7219_decode
-                0x0000000000000000        0xa build/default/production/max7219.o
- .text.max7219_digit0
-                0x0000000000000000        0xa build/default/production/max7219.o
- .text.max7219_digit1
-                0x0000000000000000        0xa build/default/production/max7219.o
- .text.max7219_digit2
-                0x0000000000000000        0xa build/default/production/max7219.o
- .text.max7219_digit3
-                0x0000000000000000        0xa build/default/production/max7219.o
- .text.max7219_digit4
-                0x0000000000000000        0xa build/default/production/max7219.o
- .text.max7219_digit5
-                0x0000000000000000        0xa build/default/production/max7219.o
- .text.max7219_digit6
-                0x0000000000000000        0xa build/default/production/max7219.o
- .text.max7219_digit7
-                0x0000000000000000        0xa build/default/production/max7219.o
- .text.max7219_digit
-                0x0000000000000000       0x4e build/default/production/max7219.o
- .progmem.gcc_sw_table.max7219_digit
-                0x0000000000000000       0x10 build/default/production/max7219.o
- .text.max7219_init
-                0x0000000000000000        0xe build/default/production/max7219.o
- .debug_info    0x0000000000000000      0x92f build/default/production/max7219.o
- .debug_abbrev  0x0000000000000000       0xdf build/default/production/max7219.o
- .debug_loc     0x0000000000000000      0x765 build/default/production/max7219.o
- .debug_aranges
-                0x0000000000000000       0xa0 build/default/production/max7219.o
- .debug_ranges  0x0000000000000000       0x90 build/default/production/max7219.o
- .debug_line    0x0000000000000000      0x2ff build/default/production/max7219.o
- .debug_str     0x0000000000000000        0xc build/default/production/max7219.o
- .comment       0x0000000000000000       0x30 build/default/production/max7219.o
- .debug_frame   0x0000000000000000      0x13c build/default/production/max7219.o
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_divmodsi4.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_divmodsi4.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_divmodsi4.o)
@@ -149,22 +62,6 @@ Discarded input sections
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
- .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
- .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
- .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
- .text.libgcc.mul
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
- .text.libgcc.div
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
- .text.libgcc   0x0000000000000000        0xc c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
- .text.libgcc.prologue
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
- .text.libgcc.builtins
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
- .text.libgcc.fmul
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
- .text.libgcc.fixed
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
@@ -214,8 +111,6 @@ Address of section .data set to 0x800100
 LOAD C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
                 0x0000000000000001                __MPLAB_BUILD = 0x1
 LOAD build/default/production/main.o
-LOAD build/default/production/ledmatrix7219d88.o
-LOAD build/default/production/max7219.o
 START GROUP
 LOAD c:/program files/microchip/xc8/v2.31/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a
 END GROUP
@@ -496,10 +391,10 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0xb72
+.debug_info     0x0000000000000000      0xb67
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/ATmega_DFP/2.2.108/xc8/avr/lib/avr5/memx-const/crtatmega328p.o
- .debug_info    0x00000000000005f4      0x57e build/default/production/main.o
+ .debug_info    0x00000000000005f4      0x573 build/default/production/main.o
 
 .debug_abbrev   0x0000000000000000      0x6fb
  *(.debug_abbrev)
@@ -548,7 +443,7 @@ END GROUP
 
 .debug_macro
  *(.debug_macro)
-OUTPUT(dist/default/production/Atmega328p-MatrizLed8x16-SPI.X.production.elf elf32-avr)
+OUTPUT(dist/default/production/Atmega328P-Prueba.X.production.elf elf32-avr)
 LOAD linker stubs
 LOAD data_init
 

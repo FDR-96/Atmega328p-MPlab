@@ -17,6 +17,7 @@ void main(void) {
     SPI_init();
     sei();
     while(1){
-         Display_Test(0x08U);
+      Display_Digit(Digit1, Deco);
+          
     }
 }
