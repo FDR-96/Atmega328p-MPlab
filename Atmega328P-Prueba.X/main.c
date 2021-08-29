@@ -32,6 +32,10 @@
 #define MAX7219_DIGIT0            0x01
 #define MAX7219_DIGIT1            0x02
 #define MAX7219_DIGIT2            0x03
+#define MAX7219_DIGIT3            0x03
+#define MAX7219_DIGIT4            0x05
+#define MAX7219_DIGIT5            0x06
+#define MAX7219_DIGIT6            0x07
 
 #define MAX7219_CHAR_BLANK        0xF 
 #define MAX7219_CHAR_NEGATIVE     0xA 
@@ -41,7 +45,7 @@
 
 
 
-char digitsInUse = 3;
+char digitsInUse = 7;
 
 void spiSendByte (char databyte)
 {
@@ -130,7 +134,7 @@ int main(void)
     int i = 999;
     while(1)
     {
-        MAX7219_displayNumber(--i);
+        MAX7219_displayNumber(5);
         _delay_ms(10);
 
         if (i == 0) {

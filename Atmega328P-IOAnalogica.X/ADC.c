@@ -15,13 +15,13 @@
 void ADC_init()
 {
 	// Output adjust = right //
-	ADMUX = (0<<ADLAR);
+	ADMUX |= (0<<ADLAR);
 
 	// Voltage Reference = AVCC //
-	ADMUX =  (1<<REFS0)|(0<<REFS1);
+	ADMUX |=  (1<<REFS0)||(0<<REFS1);
 
 	// Frequency divisor = 128 -> 16000/128 = 125 KHz
-	ADCSRA = (1<<ADPS0)|(1<<ADPS1)|(1<<ADPS2);
+	ADCSRA |= (1<<ADPS0)||(1<<ADPS1)||(1<<ADPS2);
 }
 
 int ADC_GetData(int canal)

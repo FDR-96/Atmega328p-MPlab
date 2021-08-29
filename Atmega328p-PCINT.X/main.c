@@ -1,29 +1,47 @@
-/*
- * File:   main.c
- * Author: FDPR
- *
- * Created on 25 de marzo de 2021, 05:28
- */
-
-
-#include <xc.h>
+#define F_CPU 16000000
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "PCINT.h"
+#include <util/delay.h>
 
-ISR (PCINT0_vect) {
-    // Interrupt handler code goes here
-}
-ISR (PCINT1_vect) { //A0 a D5
-    
-}
-void main(void) {
-    cli();
-    PCINT_init();
-    DDRB = (0<<PINB4);
-    sei();
-    while(1){
-    
-    
+int contA;
+int contB;
+
+int main(void)
+{
+	contA = 0;
+	contB = 0;
+
+	cli();					// Desactivando interrupciones globales
+
+    DDRD &=~ (1<<DDD2);		// Pin 2 del puerto D como entrada
+	PORTD |= (1<<PORTD2);	// pull-up activado
+
+	EICRA &=~ (1<<ISC00);	// INT0 configurado = Flanco de bajada
+	EICRA |= (1<<ISC01);
+
+	EIMSK |= (1<<INT0);		// INT0 activado
+
+	DDRB |= (1<<DDB5);		// Pin 5 del puerto B como salida
+
+	sei();					// Activando interrupciones globales
+
+    while (1) 
+    {
+		_delay_ms(5000);
+		contB = contA;
+		contA = 0;
+
+		for (int i = 0; i < contB; i++)
+		{
+			PORTB |= (1<<PORTB5);
+			_delay_ms(500);
+			PORTB &=~ (1<<PORTB5);
+			_delay_ms(500);
+		}
     }
+}
+
+ISR(INT0_vect)
+{
+	contA++;	
 }
